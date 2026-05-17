@@ -159,12 +159,38 @@ function Header() {
         </div>
 
         <nav className="flex flex-col gap-7 text-[13px] uppercase tracking-[0.35em] text-zinc-300">
-          <a onClick={closeMenu} href="#">Home</a>
-          <a onClick={closeMenu} href="#muzyka">Muzyka</a>
-          <a onClick={closeMenu} href="#omnie">O mnie</a>
-          <a onClick={closeMenu} href="#obecnie">Obecnie</a>
-          <a onClick={closeMenu} href="#kontakt">Kontakt</a>
-        </nav>
+  <Link
+    to="/"
+    onClick={closeMenu}
+    className="transition hover:text-white"
+  >
+    Start
+  </Link>
+
+  <Link
+    to="/muzyka"
+    onClick={closeMenu}
+    className="transition hover:text-white"
+  >
+    Muzyka
+  </Link>
+
+  <Link
+    to="/omnie"
+    onClick={closeMenu}
+    className="transition hover:text-white"
+  >
+    O mnie
+  </Link>
+
+  <Link
+    to="/kontakt"
+    onClick={closeMenu}
+    className="transition hover:text-white"
+  >
+    Kontakt
+  </Link>
+</nav>
 
         <div className="absolute bottom-8 left-8 right-8">
           <div className="mb-7 h-px w-full bg-white/10" />
