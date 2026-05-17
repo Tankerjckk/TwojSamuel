@@ -814,7 +814,7 @@ const seekAudio = (seconds) => {
             / Muzyka / {activeTrack.title}
           </p>
 
-          <div className="grid gap-12 lg:grid-cols-[320px_1fr] xl:grid-cols-[360px_1fr_0.9fr]">
+          <div className="grid gap-12 lg:grid-cols-[320px_minmax(0,1fr)] 2xl:grid-cols-[360px_minmax(0,1fr)_320px]">
             <div>
               <div className="relative border border-white/15 bg-zinc-950">
                 <span className="absolute left-5 top-5 z-10 flex items-center gap-2 text-[10px] uppercase tracking-[0.25em] text-zinc-300">
@@ -837,7 +837,7 @@ const seekAudio = (seconds) => {
             </div>
 
             <div>
-              <h2 className="mb-8 break-words text-[34px] uppercase leading-[1.1] tracking-[0.18em] text-white md:text-[56px] md:tracking-[0.28em] xl:text-[68px] xl:tracking-[0.34em]">
+              <h2 className="mb-8 break-words text-[34px] uppercase leading-[1.1] tracking-[0.18em] text-white md:text-[52px] md:tracking-[0.24em] 2xl:text-[68px] 2xl:tracking-[0.34em]">
                 {activeTrack.displayTitle || activeTrack.title}
               </h2>
 
@@ -865,7 +865,7 @@ const seekAudio = (seconds) => {
               </div>
             </div>
 
-            <div className="border-t border-white/10 pt-10 lg:col-span-2 xl:col-span-1 xl:border-l xl:border-t-0 xl:pl-10 xl:pt-0">
+           <div className="border-t border-white/10 pt-10 lg:col-span-2 2xl:col-span-1 2xl:border-l 2xl:border-t-0 2xl:pl-10 2xl:pt-0">
               <h3 className="mb-8 text-[13px] uppercase tracking-[0.4em] text-white">
                 Tekst
               </h3>
