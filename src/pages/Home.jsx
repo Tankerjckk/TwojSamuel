@@ -492,13 +492,21 @@ const handleTouchEnd = () => {
           </div>
         </div>
 
-        <div className="overflow-hidden">
-          <div
+        <div
   className="overflow-hidden touch-pan-y"
   onTouchStart={handleTouchStart}
   onTouchMove={handleTouchMove}
   onTouchEnd={handleTouchEnd}
 >
+  <div
+    className="flex transition-transform duration-700 ease-out"
+    style={{
+      gap: `${gap}px`,
+      transform: `translateX(calc(-${currentIndex} * ((100% - ${
+        gap * (visibleCount - 1)
+      }px) / ${visibleCount} + ${gap}px)))`,
+    }}
+  >
             {tracks.map((track, index) => (
               <motion.div
                 key={index}
