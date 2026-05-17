@@ -281,6 +281,9 @@ function LatestTracks() {
 
   const audioRef = React.useRef(null);
 
+  const touchStartX = React.useRef(null);
+const touchEndX = React.useRef(null);
+
   React.useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 768);
     handleResize();
@@ -428,6 +431,33 @@ function LatestTracks() {
     setCurrentIndex((prev) => (prev <= 0 ? maxIndex : prev - 1));
   };
 
+  const handleTouchStart = (event) => {
+  touchStartX.current = event.touches[0].clientX;
+  touchEndX.current = null;
+};
+
+const handleTouchMove = (event) => {
+  touchEndX.current = event.touches[0].clientX;
+};
+
+const handleTouchEnd = () => {
+  if (touchStartX.current === null || touchEndX.current === null) return;
+
+  const distance = touchStartX.current - touchEndX.current;
+  const minSwipeDistance = 50;
+
+  if (distance > minSwipeDistance) {
+    nextSlide();
+  }
+
+  if (distance < -minSwipeDistance) {
+    prevSlide();
+  }
+
+  touchStartX.current = null;
+  touchEndX.current = null;
+};
+
   return (
     <section
       id="muzyka"
@@ -464,14 +494,11 @@ function LatestTracks() {
 
         <div className="overflow-hidden">
           <div
-            className="flex transition-transform duration-700 ease-out"
-            style={{
-              gap: `${gap}px`,
-              transform: `translateX(calc(-${currentIndex} * ((100% - ${
-                gap * (visibleCount - 1)
-              }px) / ${visibleCount} + ${gap}px)))`,
-            }}
-          >
+  className="overflow-hidden touch-pan-y"
+  onTouchStart={handleTouchStart}
+  onTouchMove={handleTouchMove}
+  onTouchEnd={handleTouchEnd}
+>
             {tracks.map((track, index) => (
               <motion.div
                 key={index}
