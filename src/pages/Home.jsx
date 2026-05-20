@@ -2,6 +2,8 @@ import React from "react";
 import useLenisScroll from "../hooks/useLenisScroll";
 import { Link } from "react-router-dom";
 
+import SEO from "../components/SEO";
+
 import {
   motion,
   useScroll,
@@ -803,14 +805,22 @@ export default function Home() {
   useLenisScroll();
 
   return (
-    <main className="min-h-screen bg-black text-white">
-      <Header />
-      <Hero />
-      <LatestTracks />
-      <AboutSection />
-      <CurrentlySection />
-      <Footer />
-      <LoadingScreen />
-    </main>
+    <>
+      <SEO
+        title="TwójSamuel | Oficjalna strona"
+        description="Oficjalna strona TwójSamuel — muzyka, projekty, historia, najnowsze utwory i kontakt."
+        url="/"
+      />
+
+      <main className="min-h-screen bg-black text-white">
+        <Header />
+        <Hero />
+        <LatestTracks />
+        <AboutSection />
+        <CurrentlySection />
+        <Footer />
+        <LoadingScreen />
+      </main>
+    </>
   );
 }

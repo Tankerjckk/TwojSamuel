@@ -9,6 +9,7 @@ import omnieLojalnosc from "../assets/icons/omnie-lojalnosc.png";
 import omnieCytat from "../assets/omnie-cytat.png";
 
 import Sidebar from "../components/Sidebar";
+import SEO from "../components/SEO";
 
 const timeline = [
   {
@@ -68,6 +69,12 @@ const fadeUp = {
 
 export default function OmniePage() {
   return (
+    <>
+    <SEO
+  title="O mnie | TwójSamuel"
+  description="Poznaj historię TwójSamuel — muzyka, inspiracje i droga twórcza."
+  url="/omnie"
+/>
     <main className="min-h-screen bg-black text-white">
       <Sidebar active="/omnie" />
 
@@ -261,5 +268,6 @@ export default function OmniePage() {
   </motion.div>
 </section>
     </main>
-  );
+  </>
+);
 }

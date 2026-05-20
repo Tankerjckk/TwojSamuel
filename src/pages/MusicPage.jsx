@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 import Sidebar from "../components/Sidebar";
+import SEO from "../components/SEO";
 
 import muzykaHeroBanner from "../assets/muzyka-hero-banner.png";
 import muzykaHeroBannerMobile from "../assets/muzyka-hero-banner-mobile.png";
@@ -671,6 +672,13 @@ const seekAudio = (seconds) => {
   };
 
   return (
+  <>
+    <SEO
+      title="Muzyka | TwójSamuel"
+      description="Posłuchaj utworów TwójSamuel — albumy, single, teksty, historie i pełna dyskografia."
+      url="/muzyka"
+    />
+
     <main className="min-h-screen bg-black pb-[104px] text-white md:pb-[122px]">
       <Sidebar active="/muzyka" />
 
@@ -1091,5 +1099,6 @@ className="mb-4 text-[15px] leading-[2] text-zinc-300"
 </div>
 )}
     </main>
-  );
+  </>
+);
 }

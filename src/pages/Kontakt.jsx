@@ -5,6 +5,7 @@ import kontaktHeroBanner from "../assets/kontakt-hero-banner.png";
 import kontaktHeroBannerMobile from "../assets/kontakt-hero-banner-mobile.png";
 
 import Sidebar from "../components/Sidebar";
+import SEO from "../components/SEO";
 
 import {
   FaInstagramSquare,
@@ -28,6 +29,12 @@ const fadeUp = {
 
 export default function Kontakt() {
   return (
+    <>
+<SEO
+  title="Kontakt | TwójSamuel"
+  description="Skontaktuj się z TwójSamuel. Współpraca, pytania i kontakt."
+  url="/kontakt"
+/>
     <main className="min-h-screen bg-black text-white">
       <Sidebar active="/kontakt" />
 
@@ -122,21 +129,51 @@ export default function Kontakt() {
           className="h-14 border border-white/15 bg-transparent px-5 text-[11px] uppercase tracking-[0.22em] text-white outline-none transition placeholder:text-zinc-500 focus:border-white/50 md:tracking-[0.35em]"
         />
 
-        <textarea
-          name="message"
-          required
-          placeholder="Wiadomość"
-          rows="7"
-          className="resize-none border border-white/15 bg-transparent px-5 py-5 text-[11px] uppercase tracking-[0.22em] text-white outline-none transition placeholder:text-zinc-500 focus:border-white/50 md:tracking-[0.35em]"
-        />
+<textarea
+  name="message"
+  required
+  placeholder="Wiadomość"
+  rows="7"
+  className="resize-none border border-white/15 bg-transparent px-5 py-5 text-[11px] uppercase tracking-[0.22em] text-white outline-none transition placeholder:text-zinc-500 focus:border-white/50 md:tracking-[0.35em]"
+/>
 
-        <input
-          type="checkbox"
-          name="botcheck"
-          className="hidden"
-          tabIndex="-1"
-          autoComplete="off"
-        />
+<label className="flex items-start gap-4 border border-white/10 p-5">
+  <input
+    type="checkbox"
+    name="privacy_consent"
+    required
+    value="TAK"
+    className="mt-1 h-4 w-4 shrink-0 accent-white"
+  />
+
+  <span className="text-[11px] leading-[1.8] tracking-[0.08em] text-zinc-500">
+    Wyrażam zgodę na przetwarzanie moich danych osobowych w celu obsługi
+    wiadomości przesłanej przez formularz kontaktowy oraz akceptuję{" "}
+    <a
+      href="/polityka-prywatnosci"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-white underline underline-offset-4"
+    >
+      politykę prywatności
+    </a>
+    .
+  </span>
+</label>
+
+<input
+  type="hidden"
+  name="privacy_consent_text"
+  value="Użytkownik zaakceptował politykę prywatności i wyraził zgodę na przetwarzanie danych osobowych w celu obsługi wiadomości."
+/>
+
+<input
+  type="checkbox"
+  name="botcheck"
+  className="hidden"
+  tabIndex="-1"
+  autoComplete="off"
+/>
 
         <button
           type="submit"
@@ -210,5 +247,6 @@ export default function Kontakt() {
   </motion.div>
 </section>
     </main>
-  );
+  </>
+);
 }

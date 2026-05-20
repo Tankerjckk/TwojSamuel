@@ -26,7 +26,7 @@ export default function CustomCursor() {
   return (
     <div
       ref={cursorRef}
-      className="pointer-events-none fixed z-[9999] hidden -translate-x-1/2 -translate-y-1/2 md:block"
+      className="pointer-events-none fixed z-[20000] hidden -translate-x-1/2 -translate-y-1/2 md:block"
     >
       <div
         className={`relative flex items-center justify-center transition-all duration-150 ${
