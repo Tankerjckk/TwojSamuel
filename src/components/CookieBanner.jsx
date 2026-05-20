@@ -117,19 +117,17 @@ export default function CookieBanner() {
     className={`group fixed z-[15000] flex items-center justify-center border-white/10 bg-black/80 backdrop-blur-md transition duration-500 hover:border-white/40 ${
       isHomePage
         ? "left-0 top-1/2 h-[150px] w-[38px] -translate-y-1/2 border-y border-r hover:w-[52px]"
-        : "left-1/2 top-0 h-[34px] w-[150px] -translate-x-1/2 border-x border-b hover:h-[44px] md:left-0 md:top-1/2 md:h-[150px] md:w-[38px] md:-translate-y-1/2 md:translate-x-0 md:border-y md:border-r md:border-b-0 md:hover:w-[52px]"
+        : "left-1/2 top-0 h-[34px] w-[150px] -translate-x-1/2 border-x border-b hover:h-[44px] md:left-0 md:top-1/2 md:h-[150px] md:w-[38px] md:-translate-y-1/2 md:translate-x-0 md:border-y md:border-r md:border-b-0 md:border-x-0 md:hover:w-[52px] md:hover:h-[150px]"
     }`}
     aria-label="Zmień ustawienia cookies"
   >
-<span
-  className="text-[9px] uppercase tracking-[0.38em] text-zinc-500 transition duration-500 group-hover:text-white"
-  style={{
-    writingMode: isHomePage ? "vertical-rl" : "horizontal-tb",
-    textOrientation: "mixed",
-  }}
->
-  COOKIES
-</span>
+    <span
+      className={`text-[9px] uppercase tracking-[0.38em] text-zinc-500 transition duration-500 group-hover:text-white ${
+        isHomePage ? "cookie-text-vertical" : "cookie-text-mobile-top"
+      }`}
+    >
+      COOKIES
+    </span>
   </button>
 )}
 
@@ -256,12 +254,29 @@ export default function CookieBanner() {
         </div>
       )}
 
-      <style>{`
-        .cookie-panel {
-          animation: cookieSlideUp 0.55s ease-out both;
-        }
+<style>{`
+  .cookie-panel {
+    animation: cookieSlideUp 0.55s ease-out both;
+  }
 
-        @keyframes cookieSlideUp {
+  .cookie-text-vertical {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+
+  .cookie-text-mobile-top {
+    writing-mode: horizontal-tb;
+    text-orientation: mixed;
+  }
+
+  @media (min-width: 768px) {
+    .cookie-text-mobile-top {
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+    }
+  }
+
+  @keyframes cookieSlideUp {
           from {
             opacity: 0;
             transform: translateY(40px) scale(0.98);
