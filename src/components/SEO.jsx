@@ -6,21 +6,8 @@ export default function SEO({
   image="/og-image.jpg",
   url=""
 }) {
-  const fullUrl = `https://twojsamuel.pl${url}`;
-  const imageUrl = `https://twojsamuel.pl${image}`;
-
-  const schemaData = {
-  "@context": "https://schema.org",
-  "@type": "MusicGroup",
-  name: "TwójSamuel",
-  url: "https://twojsamuel.pl",
-  image: imageUrl,
-  description: description,
-  genre: ["Hip Hop", "Rap"],
-  sameAs: [
-    "https://instagram.com/twojsamuel"
-  ]
-};
+  const fullUrl = `https://www.twojsamuel.pl${url}`;
+  const imageUrl = `https://www.twojsamuel.pl${image}`;
 
   return (
     <Helmet>
@@ -31,28 +18,29 @@ export default function SEO({
         content={description}
       />
 
-      <meta
-        name="robots"
-        content="index, follow"
-      />
-
-      <meta
-        name="author"
-        content="TwójSamuel"
-      />
-
       <link
         rel="canonical"
         href={fullUrl}
       />
 
-      <meta property="og:type" content="website" />
+      <meta
+        property="og:type"
+        content="website"
+      />
 
-      <meta property="og:title" content={title} />
+      <meta
+        property="og:title"
+        content={title}
+      />
 
       <meta
         property="og:description"
         content={description}
+      />
+
+      <meta
+        property="og:url"
+        content={fullUrl}
       />
 
       <meta
@@ -61,8 +49,18 @@ export default function SEO({
       />
 
       <meta
-        property="og:url"
-        content={fullUrl}
+        property="og:image:width"
+        content="1200"
+      />
+
+      <meta
+        property="og:image:height"
+        content="630"
+      />
+
+      <meta
+        property="og:image:type"
+        content="image/jpeg"
       />
 
       <meta
@@ -94,10 +92,6 @@ export default function SEO({
         name="twitter:image"
         content={imageUrl}
       />
-
-      <script type="application/ld+json">
-{JSON.stringify(schemaData)}
-</script>
     </Helmet>
   );
 }
