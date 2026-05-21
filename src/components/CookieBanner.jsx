@@ -10,8 +10,8 @@ export default function CookieBanner() {
   const [settingsOpen, setSettingsOpen] = React.useState(false);
   const [hasConsent, setHasConsent] = React.useState(false);
 
-  const [analytics, setAnalytics] = React.useState(true);
-  const [marketing, setMarketing] = React.useState(true);
+  const [analytics, setAnalytics] = React.useState(false);
+  const [marketing, setMarketing] = React.useState(false);
 
   React.useEffect(() => {
     const savedConsent = localStorage.getItem(STORAGE_KEY);
