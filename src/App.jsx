@@ -10,6 +10,7 @@ import CustomCursor from "./components/CustomCursor";
 import NoiseOverlay from "./components/NoiseOverlay";
 import CookieBanner from "./components/CookieBanner";
 import PolitykaPrywatnosci from "./pages/PolitykaPrywatnosci";
+import GoogleAnalytics from "./components/GoogleAnalytics";
 
 import useLenisScroll from "./hooks/useLenisScroll";
 
@@ -22,6 +23,7 @@ export default function App() {
     <>
 
     <ScrollToTop />
+    <GoogleAnalytics />
       <Routes>
   <Route path="/" element={<Home />} />
   <Route path="/muzyka" element={<MusicPage />} />
