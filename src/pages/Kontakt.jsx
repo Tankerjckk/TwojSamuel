@@ -200,7 +200,7 @@ export default function Kontakt() {
               E-mail
             </h4>
             <p className="text-[16px] text-zinc-400">
-              kontakt@twojsamuel.pl
+              samuel@twojsamuel.pl
             </p>
           </div>
         </div>
