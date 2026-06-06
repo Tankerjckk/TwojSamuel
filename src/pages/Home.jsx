@@ -116,13 +116,40 @@ function Header() {
             </nav>
 
             <div className="hidden items-center gap-5 text-white sm:flex">
-              <a href="https://www.instagram.com/twojsamuel/" target="_blank"><FaInstagram size={16} /></a>
-              <a href="https://www.youtube.com/@twojsamuel1744" target="_blank"><FaYoutube size={17} /></a>
-              <a href="https://open.spotify.com/artist/3geIvmq6KlhGzEWFR8MoZ9?si=o30LKDgkSxCzB0YRgXrpEw" target="_blank"><FaSpotify size={16} /></a>
+              <a
+  href="https://www.instagram.com/twojsamuel/"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Instagram"
+>
+  <FaInstagram size={16} />
+</a>
+
+<a
+  href="https://www.youtube.com/@twojsamuel1744"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="YouTube"
+>
+  <FaYoutube size={17} />
+</a>
+
+<a
+  href="https://open.spotify.com/artist/3geIvmq6KlhGzEWFR8MoZ9?si=o30LKDgkSxCzB0YRgXrpEw"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Spotify"
+>
+  <FaSpotify size={16} />
+</a>
             </div>
 
-            <button
+          <button
+              type="button"
               onClick={() => setMenuOpen(true)}
+              aria-label="Otwórz menu"
+              aria-expanded={menuOpen}
+              aria-controls="mobile-menu"
               className="flex h-11 w-11 flex-col items-center justify-center gap-[6px] border border-white/15 lg:hidden"
             >
               <span className="h-px w-5 bg-white" />
@@ -141,7 +168,8 @@ function Header() {
       />
 
       <aside
-        className={`fixed right-0 top-0 z-[70] h-screen w-[86%] max-w-[390px] border-l border-white/10 bg-black p-8 transition duration-500 ${
+          id="mobile-menu"
+          className={`fixed right-0 top-0 z-[70] h-screen w-[86%] max-w-[390px] border-l border-white/10 bg-black p-8 transition duration-500 ${
           menuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -153,11 +181,13 @@ function Header() {
           />
 
           <button
-            onClick={closeMenu}
-            className="h-11 w-11 border border-white/15 text-2xl text-white"
-          >
-            ×
-          </button>
+  type="button"
+  onClick={closeMenu}
+  aria-label="Zamknij menu"
+  className="h-11 w-11 border border-white/15 text-2xl text-white"
+>
+  ×
+</button>
         </div>
 
         <nav className="flex flex-col gap-7 text-[13px] uppercase tracking-[0.35em] text-zinc-300">
@@ -198,9 +228,32 @@ function Header() {
           <div className="mb-7 h-px w-full bg-white/10" />
 
           <div className="mb-8 flex items-center gap-6 text-white">
-            <a href="https://www.instagram.com/twojsamuel/" target="_blank"><FaInstagram size={18} /></a>
-            <a href="https://www.youtube.com/@twojsamuel1744" target="_blank"><FaYoutube size={20} /></a>
-            <a href="https://open.spotify.com/artist/3geIvmq6KlhGzEWFR8MoZ9?si=o30LKDgkSxCzB0YRgXrpEw" target="_blank"><FaSpotify size={18} /></a>
+<a
+  href="https://www.instagram.com/twojsamuel/"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Instagram"
+>
+  <FaInstagram size={18} />
+</a>
+
+<a
+  href="https://www.youtube.com/@twojsamuel1744"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="YouTube"
+>
+  <FaYoutube size={20} />
+</a>
+
+<a
+  href="https://open.spotify.com/artist/3geIvmq6KlhGzEWFR8MoZ9?si=o30LKDgkSxCzB0YRgXrpEw"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Spotify"
+>
+  <FaSpotify size={18} />
+</a>
           </div>
 
           <p className="text-[10px] uppercase leading-[2] tracking-[0.35em] text-zinc-600">
