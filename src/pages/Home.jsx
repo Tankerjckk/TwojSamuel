@@ -514,141 +514,148 @@ const handleTouchEnd = () => {
 };
 
   return (
-    <section
-      id="muzyka"
-      className="relative overflow-hidden border-t border-white/10 bg-black py-20 md:py-32"
-    >
-      <motion.div
-        className="mx-auto w-full max-w-[1700px] px-8 md:px-12"
-        variants={fadeUp}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ amount: 0.35 }}
-      >
-        <div className="mb-10 flex items-center justify-between gap-6 md:mb-16">
-          <h2 className="text-[20px] uppercase tracking-[0.18em] text-white md:text-[34px] md:tracking-[0.22em]">
-            Ostatnie utwory
-          </h2>
-
-          <div className="flex items-center gap-3 md:gap-4">
-            <button
-              onClick={prevSlide}
-              className="flex h-11 w-11 items-center justify-center border border-white/10 text-lg text-zinc-400 transition hover:border-white hover:text-white md:h-14 md:w-14 md:text-xl"
-            >
-              ←
-            </button>
-
-            <button
-              onClick={nextSlide}
-              className="flex h-11 w-11 items-center justify-center border border-white/10 text-lg text-zinc-400 transition hover:border-white hover:text-white md:h-14 md:w-14 md:text-xl"
-            >
-              →
-            </button>
-          </div>
-        </div>
-
-        <div
-  className="overflow-hidden touch-pan-y"
-  onTouchStart={handleTouchStart}
-  onTouchMove={handleTouchMove}
-  onTouchEnd={handleTouchEnd}
+<section
+  id="muzyka"
+  className="relative overflow-hidden border-t border-white/10 bg-black py-20 md:py-32"
 >
-  <div
-    className="flex transition-transform duration-700 ease-out"
-    style={{
-      gap: `${gap}px`,
-      transform: `translateX(calc(-${currentIndex} * ((100% - ${
-        gap * (visibleCount - 1)
-      }px) / ${visibleCount} + ${gap}px)))`,
-    }}
+  <motion.div
+    className="mx-auto w-full max-w-[1700px] px-8 md:px-12"
+    variants={fadeUp}
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ amount: 0.35 }}
   >
-            {tracks.map((track, index) => (
-              <motion.div
-                key={index}
-                className="group flex-shrink-0 cursor-pointer"
-                style={{
-                  width: `calc((100% - ${
-                    gap * (visibleCount - 1)
-                  }px) / ${visibleCount})`,
-                }}
-                whileHover={{ y: -10 }}
-                transition={{ duration: 0.25 }}
-              >
-                <div className="relative overflow-hidden border border-white/10 bg-zinc-950">
-                  <img
-                    src={track.image}
-                    alt={track.title}
-                    className="aspect-square w-full object-cover transition duration-700 group-hover:scale-105 group-hover:opacity-80"
-                  />
+    <div className="mb-10 flex items-center justify-between gap-6 md:mb-16">
+      <h2 className="text-[20px] uppercase tracking-[0.18em] text-white md:text-[34px] md:tracking-[0.22em]">
+        Ostatnie utwory
+      </h2>
 
-                  <div className="absolute inset-0 bg-black/0 transition duration-500 group-hover:bg-black/20" />
+      <div className="flex items-center gap-3 md:gap-4">
+        <button
+          type="button"
+          onClick={prevSlide}
+          aria-label="Poprzednie utwory"
+          className="flex h-11 w-11 items-center justify-center border border-white/10 text-lg text-zinc-400 transition hover:border-white hover:text-white md:h-14 md:w-14 md:text-xl"
+        >
+          ←
+        </button>
 
-                  {track.audio && (
-                    <div
-                      role="button"
-                      tabIndex={0}
-                      onClick={() => toggleAudio(track, index)}
-                      onKeyDown={(event) => {
-                        if (event.key === "Enter" || event.key === " ") {
-                          toggleAudio(track, index);
-                        }
-                      }}
-                      className="absolute bottom-4 right-4 z-20 flex h-14 w-14 cursor-pointer items-center justify-center rounded-full border border-white/20 bg-black/70 backdrop-blur-md transition hover:scale-105 hover:border-white"
-                    >
-                      {playingIndex === index ? (
-                        <div className="flex gap-[4px]">
-                          <div className="h-4 w-[3px] bg-white" />
-                          <div className="h-4 w-[3px] bg-white" />
-                        </div>
-                      ) : (
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 24 24"
-                          fill="white"
-                          className="ml-[2px] h-5 w-5"
-                        >
-                          <path d="M8 5v14l11-7z" />
-                        </svg>
-                      )}
-                    </div>
-                  )}
-                </div>
+        <button
+          type="button"
+          onClick={nextSlide}
+          aria-label="Następne utwory"
+          className="flex h-11 w-11 items-center justify-center border border-white/10 text-lg text-zinc-400 transition hover:border-white hover:text-white md:h-14 md:w-14 md:text-xl"
+        >
+          →
+        </button>
+      </div>
+    </div>
 
-                <div className="mt-5 border-b border-white/10 pb-5 md:mt-6">
-                  <div className="flex items-end justify-between">
-                    <div>
-                      <h3 className="mb-2 text-[17px] uppercase tracking-[0.08em] text-white md:text-[20px]">
-                        {track.title}
-                      </h3>
+    <div
+      className="overflow-hidden touch-pan-y"
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+    >
+      <div
+        className="flex transition-transform duration-700 ease-out"
+        style={{
+          gap: `${gap}px`,
+          transform: `translateX(calc(-${currentIndex} * ((100% - ${
+            gap * (visibleCount - 1)
+          }px) / ${visibleCount} + ${gap}px)))`,
+        }}
+      >
+        {tracks.map((track, index) => (
+          <motion.div
+            key={index}
+            className="group flex-shrink-0"
+            style={{
+              width: `calc((100% - ${
+                gap * (visibleCount - 1)
+              }px) / ${visibleCount})`,
+            }}
+            whileHover={{ y: -10 }}
+            transition={{ duration: 0.25 }}
+          >
+            <div className="relative overflow-hidden border border-white/10 bg-zinc-950">
+              <img
+                src={track.image}
+                alt={`Okładka utworu ${track.title}`}
+                className="aspect-square w-full object-cover transition duration-700 group-hover:scale-105 group-hover:opacity-80"
+              />
 
-                      <p className="text-[10px] uppercase tracking-[0.3em] text-zinc-500 md:text-[11px] md:tracking-[0.35em]">
-                        {track.audio ? "snippet / " : "single / "}
-                        {track.year}
-                      </p>
-                    </div>
+              <div className="absolute inset-0 bg-black/0 transition duration-500 group-hover:bg-black/20" />
 
-                    <span className="text-zinc-700 transition group-hover:text-white">
-                      →
+              {track.audio && (
+                <button
+                  type="button"
+                  aria-label={
+                    playingIndex === index
+                      ? `Zatrzymaj utwór ${track.title}`
+                      : `Odtwórz utwór ${track.title}`
+                  }
+                  onClick={() => toggleAudio(track, index)}
+                  className="absolute bottom-4 right-4 z-20 flex h-14 w-14 items-center justify-center rounded-full border border-white/20 bg-black/70 backdrop-blur-md transition hover:scale-105 hover:border-white"
+                >
+                  {playingIndex === index ? (
+                    <span className="flex gap-[4px]" aria-hidden="true">
+                      <span className="h-4 w-[3px] bg-white" />
+                      <span className="h-4 w-[3px] bg-white" />
                     </span>
-                  </div>
-
-                  {playingIndex === index && (
-                    <div className="mt-4 h-px w-full overflow-hidden bg-white/10">
-                      <div
-                        className="h-full bg-white/80 transition-all duration-150 audio-pulse"
-                        style={{
-                          width: `${audioProgress}%`,
-                        }}
-                      />
-                    </div>
+                  ) : (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="white"
+                      className="ml-[2px] h-5 w-5"
+                      aria-hidden="true"
+                    >
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
                   )}
+                </button>
+              )}
+            </div>
+
+            <div className="mt-5 border-b border-white/10 pb-5 md:mt-6">
+              <div className="flex items-end justify-between">
+                <div>
+                  <h3 className="mb-2 text-[17px] uppercase tracking-[0.08em] text-white md:text-[20px]">
+                    {track.title}
+                  </h3>
+
+                  <p className="text-[10px] uppercase tracking-[0.3em] text-zinc-400 md:text-[11px] md:tracking-[0.35em]">
+                    {track.audio ? "snippet / " : "single / "}
+                    {track.year}
+                  </p>
                 </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </motion.div>
-    </section>
+
+                <span
+                  className="text-zinc-500 transition group-hover:text-white"
+                  aria-hidden="true"
+                >
+                  →
+                </span>
+              </div>
+
+              {playingIndex === index && (
+                <div className="mt-4 h-px w-full overflow-hidden bg-white/10">
+                  <div
+                    className="h-full bg-white/80 transition-all duration-150 audio-pulse"
+                    style={{
+                      width: `${audioProgress}%`,
+                    }}
+                  />
+                </div>
+              )}
+            </div>
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  </motion.div>
+</section>
   );
 }
 
