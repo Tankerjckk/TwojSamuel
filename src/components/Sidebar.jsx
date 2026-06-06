@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FaInstagram, FaYoutube, FaSpotify } from "react-icons/fa";
 
-import logo from "../assets/logo.png";
+import logo from "../assets/logo.webp";
 
 export default function Sidebar({ active }) {
   const [open, setOpen] = React.useState(false);

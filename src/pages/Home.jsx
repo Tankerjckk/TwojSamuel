@@ -14,15 +14,15 @@ import {
 
 import { FaInstagram, FaYoutube, FaSpotify } from "react-icons/fa";
 
-import logo from "../assets/logo.png";
+import logo from "../assets/logo.webp";
 
-import heroBanner from "../assets/hero-banner.png";
-import heroBannerMobile from "../assets/hero-banner-mobile.png";
+import heroBanner from "../assets/hero-banner.webp";
+import heroBannerMobile from "../assets/hero-banner-mobile.webp";
 
-import presjaCover from "../assets/tracks/presja.png";
+import presjaCover from "../assets/tracks/presja.webp";
 
-import aboutme1 from "../assets/aboutme1.png";
-import aboutme2 from "../assets/aboutme2.png";
+import aboutme1 from "../assets/aboutme1.webp";
+import aboutme2 from "../assets/aboutme2.webp";
 
 import preludiumAudio from "../audio/short/1-preludium-short.mp3";
 import pracyAudio from "../audio/short/2-pracy-short.mp3";

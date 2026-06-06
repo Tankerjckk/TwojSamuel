@@ -7,7 +7,7 @@ import SEO from "../components/SEO";
 import muzykaHeroBanner from "../assets/muzyka-hero-banner.png";
 import muzykaHeroBannerMobile from "../assets/muzyka-hero-banner-mobile.png";
 
-import presjaCover from "../assets/tracks/presja.png";
+import presjaCover from "../assets/tracks/presja.webp";
 import tostyCover from "../assets/tracks/tosty-i-hot-dogi.png";
 import mnieTestujCover from "../assets/tracks/mnie-testuj.png";
 import potencjalCover from "../assets/tracks/potencjal.png";
