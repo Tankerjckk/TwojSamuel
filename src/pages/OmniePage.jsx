@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 
 import omnieHeroBanner from "../assets/omnie-hero-banner.png";
 import omniePrawda from "../assets/icons/omnie-prawda.png";
-import omnieNiezaleznosc from "../assets/icons/omnie-niezaleznosc.png";
-import omnieWrazliwosc from "../assets/icons/omnie-wrazliwosc.png";
-import omnieLojalnosc from "../assets/icons/omnie-lojalnosc.png";
-import omnieCytat from "../assets/omnie-cytat.png";
+import omnieNiezaleznosc from "../assets/icons/omnie-niezaleznosc.webp";
+import omnieWrazliwosc from "../assets/icons/omnie-wrazliwosc.webp";
+import omnieLojalnosc from "../assets/icons/omnie-lojalnosc.webp";
+import omnieCytat from "../assets/omnie-cytat.webp";
 
 import Sidebar from "../components/Sidebar";
 import SEO from "../components/SEO";
