@@ -256,7 +256,7 @@ function Header() {
 </a>
           </div>
 
-          <p className="text-[10px] uppercase leading-[2] tracking-[0.35em] text-zinc-600">
+          <p className="text-[10px] uppercase leading-[2] tracking-[0.35em] text-zinc-500">
             underground / warszawa / 2026
           </p>
         </div>
@@ -751,18 +751,18 @@ function CurrentlySection() {
         </motion.div>
 
         <motion.div style={{ y: contentY }} className="grid grid-cols-1 gap-10 border-y border-white/10 py-12 md:grid-cols-[1fr_1.2fr] md:gap-14 md:py-14">
-          <p className="text-[11px] uppercase tracking-[0.4em] text-zinc-500">teraz / 2026</p>
+          <p className="text-[11px] uppercase tracking-[0.4em] text-zinc-400">teraz / 2026</p>
 
           <div className="space-y-6 text-[13px] uppercase leading-[2.1] tracking-[0.16em] text-zinc-200 md:space-y-7 md:text-[21px] md:leading-[2.2] md:tracking-[0.22em]">
             <p>pracuję nad nowym materiałem.</p>
             <p>LEPSZA JAKOŚĆ, WIĘCEJ DŹWIĘKÓW I EKSPERYMENTÓW.</p>
-            <p className="text-[12px] tracking-[0.14em] text-zinc-600 md:text-[15px] md:tracking-[0.18em]">
+            <p className="text-[12px] tracking-[0.14em] text-zinc-400 md:text-[15px] md:tracking-[0.18em]">
               Po premierze albumu będę publikować jeden utwór miesięcznie.
             </p>
           </div>
         </motion.div>
 
-        <div className="mt-10 flex flex-col gap-4 text-[10px] uppercase tracking-[0.35em] text-zinc-600 md:mt-12 md:flex-row md:justify-between">
+        <div className="mt-10 flex flex-col gap-4 text-[10px] uppercase tracking-[0.35em] text-zinc-400 md:mt-12 md:flex-row md:justify-between">
           <span>offline</span>
           <span>warszawa</span>
           <span>underground</span>
@@ -778,7 +778,7 @@ function Footer() {
       <div className="mx-auto flex max-w-[1200px] flex-col items-center justify-between gap-10 text-center md:flex-row md:text-left">
         <div>
           <h3 className="mb-3 text-[18px] uppercase tracking-[0.28em] text-white">TwójSamuel</h3>
-          <p className="text-[10px] uppercase tracking-[0.28em] text-zinc-600 md:tracking-[0.35em]">
+          <p className="text-[10px] uppercase tracking-[0.28em] text-zinc-500 md:tracking-[0.35em]">
             underground / warszawa / 2026
           </p>
         </div>
@@ -789,7 +789,7 @@ function Footer() {
           <a href="https://www.instagram.com/twojsamuel/" target="_blank" className="transition hover:text-white">Instagram</a>
         </div>
 
-        <div className="text-[10px] uppercase tracking-[0.35em] text-zinc-700">© twójsamuel</div>
+        <div className="text-[10px] uppercase tracking-[0.35em] text-zinc-500">© twójsamuel</div>
       </div>
     </footer>
   );
