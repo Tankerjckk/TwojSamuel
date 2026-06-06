@@ -2,4 +2,4 @@ User-agent: *
 
 Allow: /
 
-Sitemap: https://twojsamuel.pl/sitemap.xml
+Sitemap: https://www.twojsamuel.pl/sitemap.xml
