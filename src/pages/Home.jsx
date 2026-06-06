@@ -256,7 +256,7 @@ function Header() {
 </a>
           </div>
 
-          <p className="text-[10px] uppercase leading-[2] tracking-[0.35em] text-zinc-500">
+          <p className="text-[10px] uppercase leading-[2] tracking-[0.35em] text-zinc-400">
             underground / warszawa / 2026
           </p>
         </div>
@@ -632,7 +632,7 @@ const handleTouchEnd = () => {
                 </div>
 
                 <span
-                  className="text-zinc-500 transition group-hover:text-white"
+                  className="text-zinc-400 transition group-hover:text-white"
                   aria-hidden="true"
                 >
                   →
@@ -689,7 +689,7 @@ function AboutSection() {
           animate={isInView ? "visible" : "hidden"}
           className="relative z-10 border-y border-white/10 py-12 text-center md:py-14"
         >
-          <p className="mb-5 text-[10px] uppercase tracking-[0.38em] text-zinc-500 md:tracking-[0.5em]">
+          <p className="mb-5 text-[10px] uppercase tracking-[0.38em] text-zinc-400 md:tracking-[0.5em]">
             To nie rap. To dziennik.
           </p>
 
@@ -742,7 +742,7 @@ function CurrentlySection() {
         <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.25 }}>
           <div className="mb-10 flex items-center gap-4">
             <span className="h-2 w-2 rounded-full bg-white shadow-[0_0_20px_white]" />
-            <p className="text-[10px] uppercase tracking-[0.5em] text-zinc-500">status aktywny</p>
+            <p className="text-[10px] uppercase tracking-[0.5em] text-zinc-400">status aktywny</p>
           </div>
 
           <motion.h2 style={{ x: bigTextX }} className="mb-12 text-[42px] font-light uppercase leading-none tracking-[0.18em] text-white md:mb-16 md:text-[110px] md:tracking-[0.28em]">
@@ -778,7 +778,7 @@ function Footer() {
       <div className="mx-auto flex max-w-[1200px] flex-col items-center justify-between gap-10 text-center md:flex-row md:text-left">
         <div>
           <h3 className="mb-3 text-[18px] uppercase tracking-[0.28em] text-white">TwójSamuel</h3>
-          <p className="text-[10px] uppercase tracking-[0.28em] text-zinc-500 md:tracking-[0.35em]">
+          <p className="text-[10px] uppercase tracking-[0.28em] text-zinc-400 md:tracking-[0.35em]">
             underground / warszawa / 2026
           </p>
         </div>
@@ -789,7 +789,7 @@ function Footer() {
           <a href="https://www.instagram.com/twojsamuel/" target="_blank" className="transition hover:text-white">Instagram</a>
         </div>
 
-        <div className="text-[10px] uppercase tracking-[0.35em] text-zinc-500">© twójsamuel</div>
+        <div className="text-[10px] uppercase tracking-[0.35em] text-zinc-400">© twójsamuel</div>
       </div>
     </footer>
   );
