@@ -248,9 +248,9 @@ export default function Kontakt() {
   aria-hidden="true"
 />
           <div>
-            <h4 className="mb-3 text-[12px] uppercase tracking-[0.35em] text-white">
+            <h2 className="mb-3 text-[12px] uppercase tracking-[0.35em] text-white">
               E-mail
-            </h4>
+            </h2>
             <p className="text-[16px] text-zinc-400">
               samuel@twojsamuel.pl
             </p>
@@ -264,9 +264,9 @@ export default function Kontakt() {
   aria-hidden="true"
 />
           <div>
-            <h4 className="mb-3 text-[12px] uppercase tracking-[0.35em] text-white">
+            <h2 className="mb-3 text-[12px] uppercase tracking-[0.35em] text-white">
               Instagram
-            </h4>
+            </h2>
             <p className="text-[16px] text-zinc-400">@twojsamuel</p>
           </div>
         </div>
@@ -278,9 +278,9 @@ export default function Kontakt() {
   aria-hidden="true"
 />
           <div>
-            <h4 className="mb-3 text-[12px] uppercase tracking-[0.35em] text-white">
+            <h2 className="mb-3 text-[12px] uppercase tracking-[0.35em] text-white">
               Lokalizacja
-            </h4>
+            </h2>
             <p className="text-[16px] text-zinc-400">
               Warszawa, Polska
             </p>
