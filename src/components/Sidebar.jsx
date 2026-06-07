@@ -8,7 +8,7 @@ export default function Sidebar({ active }) {
   const [open, setOpen] = React.useState(false);
 
   const navItems = [
-    { label: "Start", path: "/" },
+    { label: "Strona główna", shortLabel: "Start", path: "/" },
     { label: "Muzyka", path: "/muzyka" },
     { label: "O mnie", path: "/omnie" },
     { label: "Kontakt", path: "/kontakt" },

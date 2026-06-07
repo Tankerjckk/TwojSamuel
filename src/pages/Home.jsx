@@ -102,10 +102,10 @@ function Header() {
             <nav className="hidden items-center gap-12 text-[11px] uppercase tracking-[0.35em] text-zinc-300 lg:flex">
 <a
   href="/"
-  aria-label="Strona główna TwójSamuel"
   className="text-white underline underline-offset-[10px]"
 >
-  Start
+  <span aria-hidden="true">Start</span>
+  <span className="sr-only">Strona główna TwójSamuel</span>
 </a>
               <a href="/muzyka" className="transition hover:text-white">
   Muzyka
@@ -198,10 +198,10 @@ function Header() {
 <Link
   to="/"
   onClick={closeMenu}
-  aria-label="Strona główna TwójSamuel"
   className="transition hover:text-white"
 >
-  Start
+  <span aria-hidden="true">Start</span>
+  <span className="sr-only">Strona główna TwójSamuel</span>
 </Link>
 
   <Link
