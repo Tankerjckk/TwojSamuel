@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 import kontaktHeroBanner from "../assets/kontakt-hero-banner.webp";
@@ -305,6 +306,21 @@ export default function Kontakt() {
             </div>
           </div>
         </div>
+        <div className="border-t border-white/10 pt-8 text-[11px] uppercase leading-[2] tracking-[0.22em] text-zinc-500">
+  <Link
+    to="/polityka-prywatnosci"
+    className="block transition hover:text-white"
+  >
+    Polityka prywatności
+  </Link>
+
+  <Link
+    to="/deklaracja-dostepnosci"
+    className="mt-3 block transition hover:text-white"
+  >
+    Deklaracja dostępności
+  </Link>
+</div>
       </div>
     </div>
   </motion.div>

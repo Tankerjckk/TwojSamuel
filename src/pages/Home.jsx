@@ -809,22 +809,66 @@ function CurrentlySection() {
 
 function Footer() {
   return (
-    <footer id="kontakt" className="relative border-t border-white/10 bg-black px-5 py-14 md:px-8">
+    <footer
+      id="kontakt"
+      className="relative border-t border-white/10 bg-black px-5 py-14 md:px-8"
+    >
       <div className="mx-auto flex max-w-[1200px] flex-col items-center justify-between gap-10 text-center md:flex-row md:text-left">
         <div>
-          <h3 className="mb-3 text-[18px] uppercase tracking-[0.28em] text-white">TwójSamuel</h3>
+          <h3 className="mb-3 text-[18px] uppercase tracking-[0.28em] text-white">
+            TwójSamuel
+          </h3>
           <p className="text-[10px] uppercase tracking-[0.28em] text-zinc-400 md:tracking-[0.35em]">
             underground / warszawa / 2026
           </p>
         </div>
 
         <div className="flex flex-col items-center gap-5 text-[11px] uppercase tracking-[0.35em] text-zinc-400 md:flex-row md:gap-8">
-          <a href="https://open.spotify.com/artist/3geIvmq6KlhGzEWFR8MoZ9?si=o30LKDgkSxCzB0YRgXrpEw" target="_blank" className="transition hover:text-white">Spotify</a>
-          <a href="https://www.youtube.com/@twojsamuel1744" target="_blank" className="transition hover:text-white">YouTube</a>
-          <a href="https://www.instagram.com/twojsamuel/" target="_blank" className="transition hover:text-white">Instagram</a>
+          <a
+            href="https://open.spotify.com/artist/3geIvmq6KlhGzEWFR8MoZ9?si=o30LKDgkSxCzB0YRgXrpEw"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition hover:text-white"
+          >
+            Spotify
+          </a>
+
+          <a
+            href="https://www.youtube.com/@twojsamuel1744"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition hover:text-white"
+          >
+            YouTube
+          </a>
+
+          <a
+            href="https://www.instagram.com/twojsamuel/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition hover:text-white"
+          >
+            Instagram
+          </a>
         </div>
 
-        <div className="text-[10px] uppercase tracking-[0.35em] text-zinc-400">© twójsamuel</div>
+        <div className="flex flex-col items-center gap-3 text-[10px] uppercase tracking-[0.28em] text-zinc-400 md:items-end md:tracking-[0.35em]">
+          <p>© twójsamuel</p>
+
+          <Link
+            to="/polityka-prywatnosci"
+            className="transition hover:text-white"
+          >
+            Polityka prywatności
+          </Link>
+
+          <Link
+            to="/deklaracja-dostepnosci"
+            className="transition hover:text-white"
+          >
+            Deklaracja dostępności
+          </Link>
+        </div>
       </div>
     </footer>
   );
