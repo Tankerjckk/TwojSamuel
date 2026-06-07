@@ -3,11 +3,50 @@ import { Helmet } from "react-helmet-async";
 export default function SEO({
   title,
   description,
-  image="/og-image.jpg",
-  url=""
+  image = "/og-image.jpg",
+  url = "",
 }) {
   const fullUrl = `https://www.twojsamuel.pl${url}`;
   const imageUrl = `https://www.twojsamuel.pl${image}`;
+
+  const schema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://www.twojsamuel.pl/#person",
+        name: "TwójSamuel",
+        url: "https://www.twojsamuel.pl",
+        image: imageUrl,
+        jobTitle: "Raper",
+        nationality: "Polish",
+        sameAs: [
+          "https://www.instagram.com/twojsamuel/",
+          "https://www.youtube.com/@twojsamuel1744",
+          "https://open.spotify.com/artist/3geIvmq6KlhGzEWFR8MoZ9"
+        ]
+      },
+      {
+        "@type": "MusicGroup",
+        "@id": "https://www.twojsamuel.pl/#musicgroup",
+        name: "TwójSamuel",
+        url: "https://www.twojsamuel.pl",
+        genre: ["Hip-Hop", "Rap"],
+        sameAs: [
+          "https://www.instagram.com/twojsamuel/",
+          "https://www.youtube.com/@twojsamuel1744",
+          "https://open.spotify.com/artist/3geIvmq6KlhGzEWFR8MoZ9"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.twojsamuel.pl/#website",
+        url: "https://www.twojsamuel.pl",
+        name: "TwójSamuel",
+        description: "Oficjalna strona TwójSamuel"
+      }
+    ]
+  };
 
   return (
     <Helmet>
@@ -92,6 +131,10 @@ export default function SEO({
         name="twitter:image"
         content={imageUrl}
       />
+
+      <script type="application/ld+json">
+        {JSON.stringify(schema)}
+      </script>
     </Helmet>
   );
 }
