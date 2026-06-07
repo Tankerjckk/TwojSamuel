@@ -222,7 +222,11 @@ export default function OmniePage() {
   src={value.icon}
   alt=""
   aria-hidden="true"
-  className="mx-auto -mb-2 h-32 w-32 object-contain opacity-90 transition duration-500 hover:scale-110"
+  width="96"
+  height="96"
+  loading="lazy"
+  decoding="async"
+  className="mx-auto mb-3 h-16 w-16 object-contain opacity-90 transition duration-500 hover:scale-110"
 />
 
                 <h3 className="mb-6 text-[13px] uppercase tracking-[0.45em] text-white">
