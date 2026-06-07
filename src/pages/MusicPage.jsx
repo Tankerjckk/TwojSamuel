@@ -4,23 +4,23 @@ import { motion } from "framer-motion";
 import Sidebar from "../components/Sidebar";
 import SEO from "../components/SEO";
 
-import muzykaHeroBanner from "../assets/muzyka-hero-banner.png";
-import muzykaHeroBannerMobile from "../assets/muzyka-hero-banner-mobile.png";
+import muzykaHeroBanner from "../assets/muzyka-hero-banner.webp";
+import muzykaHeroBannerMobile from "../assets/muzyka-hero-banner-mobile.webp";
 
 import presjaCover from "../assets/tracks/presja.webp";
-import tostyCover from "../assets/tracks/tosty-i-hot-dogi.png";
-import mnieTestujCover from "../assets/tracks/mnie-testuj.png";
-import potencjalCover from "../assets/tracks/potencjal.png";
-import zycioweTangoCover from "../assets/tracks/zyciowe-tango.png";
-import jomoCover from "../assets/tracks/jomo.png";
-import krokiCover from "../assets/tracks/kroki.png";
-import uniesienieCover from "../assets/tracks/uniesienie.png";
-import planyIndywidualneCover from "../assets/tracks/plany-indywidualne.png";
-import samoswiadomoscCover from "../assets/tracks/samoswiadomosc.png";
-import tubblyCover from "../assets/tracks/tubbly.png";
-import desynchronizacjaCover from "../assets/tracks/desynchronizacja.png";
-import hotelParasiteCover from "../assets/tracks/hotel-parasite.png";
-import chanelCover from "../assets/tracks/chanel.png";
+import tostyCover from "../assets/tracks/tosty-i-hot-dogi.webp";
+import mnieTestujCover from "../assets/tracks/mnie-testuj.webp";
+import potencjalCover from "../assets/tracks/potencjal.webp";
+import zycioweTangoCover from "../assets/tracks/zyciowe-tango.webp";
+import jomoCover from "../assets/tracks/jomo.webp";
+import krokiCover from "../assets/tracks/kroki.webp";
+import uniesienieCover from "../assets/tracks/uniesienie.webp";
+import planyIndywidualneCover from "../assets/tracks/plany-indywidualne.webp";
+import samoswiadomoscCover from "../assets/tracks/samoswiadomosc.webp";
+import tubblyCover from "../assets/tracks/tubbly.webp";
+import desynchronizacjaCover from "../assets/tracks/desynchronizacja.webp";
+import hotelParasiteCover from "../assets/tracks/hotel-parasite.webp";
+import chanelCover from "../assets/tracks/chanel.webp";
 
 import preludiumAudio from "../audio/full/1-preludium.mp3";
 import pracyAudio from "../audio/full/2-pracy.mp3";
