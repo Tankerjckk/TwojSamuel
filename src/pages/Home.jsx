@@ -100,9 +100,13 @@ function Header() {
 
           <div className="flex items-center gap-6 md:gap-14">
             <nav className="hidden items-center gap-12 text-[11px] uppercase tracking-[0.35em] text-zinc-300 lg:flex">
-              <a href="#" className="text-white underline underline-offset-[10px]">
-                Start
-              </a>
+<a
+  href="/"
+  aria-label="Strona główna TwójSamuel"
+  className="text-white underline underline-offset-[10px]"
+>
+  Start
+</a>
               <a href="/muzyka" className="transition hover:text-white">
   Muzyka
 </a>
@@ -191,13 +195,14 @@ function Header() {
         </div>
 
         <nav className="flex flex-col gap-7 text-[13px] uppercase tracking-[0.35em] text-zinc-300">
-  <Link
-    to="/"
-    onClick={closeMenu}
-    className="transition hover:text-white"
-  >
-    Start
-  </Link>
+<Link
+  to="/"
+  onClick={closeMenu}
+  aria-label="Strona główna TwójSamuel"
+  className="transition hover:text-white"
+>
+  Start
+</Link>
 
   <Link
     to="/muzyka"

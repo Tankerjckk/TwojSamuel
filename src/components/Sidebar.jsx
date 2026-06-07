@@ -76,17 +76,18 @@ export default function Sidebar({ active }) {
 
         <nav className="space-y-9 text-[11px] uppercase tracking-[0.35em] text-zinc-500">
           {navItems.map((item) => (
-            <Link
-              key={item.path}
-              to={item.path}
-              className={`block transition hover:text-white ${
-                active === item.path
-                  ? "border-l border-white pl-4 text-white"
-                  : ""
-              }`}
-            >
-              {item.label}
-            </Link>
+<Link
+  key={item.path}
+  to={item.path}
+  aria-label={item.path === "/" ? "Strona główna TwójSamuel" : item.label}
+  className={`block transition hover:text-white ${
+    active === item.path
+      ? "border-l border-white pl-4 text-white"
+      : ""
+  }`}
+>
+  {item.label}
+</Link>
           ))}
         </nav>
 
@@ -146,18 +147,19 @@ export default function Sidebar({ active }) {
 
         <nav className="flex flex-col gap-8 text-[13px] uppercase tracking-[0.35em] text-zinc-400">
           {navItems.map((item) => (
-            <Link
-              key={item.path}
-              to={item.path}
-              onClick={closeMenu}
-              className={`transition hover:text-white ${
-                active === item.path
-                  ? "border-l border-white pl-4 text-white"
-                  : ""
-              }`}
-            >
-              {item.label}
-            </Link>
+<Link
+  key={item.path}
+  to={item.path}
+  onClick={closeMenu}
+  aria-label={item.path === "/" ? "Strona główna TwójSamuel" : item.label}
+  className={`transition hover:text-white ${
+    active === item.path
+      ? "border-l border-white pl-4 text-white"
+      : ""
+  }`}
+>
+  {item.label}
+</Link>
           ))}
         </nav>
 

@@ -801,13 +801,13 @@ const seekAudio = (seconds) => {
 
           <div>
             <div className="mb-10 border-b border-white/10 pb-5">
-              <p className="mb-2 text-[10px] uppercase tracking-[0.45em] text-zinc-600">
+              <p className="mb-2 text-[10px] uppercase tracking-[0.45em] text-zinc-400">
                 {activeSection.type}
               </p>
 
-              <h3 className="text-[18px] uppercase tracking-[0.45em] text-white md:text-[24px]">
+              <h2 className="text-[18px] uppercase tracking-[0.45em] text-white md:text-[24px]">
                 {activeSection.title}
-              </h3>
+              </h2>
             </div>
 
             <div className="grid gap-5 md:grid-cols-2">
