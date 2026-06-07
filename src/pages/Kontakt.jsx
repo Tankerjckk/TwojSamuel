@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-import kontaktHeroBanner from "../assets/kontakt-hero-banner.png";
-import kontaktHeroBannerMobile from "../assets/kontakt-hero-banner-mobile.png";
+import kontaktHeroBanner from "../assets/kontakt-hero-banner.webp";
+import kontaktHeroBannerMobile from "../assets/kontakt-hero-banner-mobile.webp";
 
 import Sidebar from "../components/Sidebar";
 import SEO from "../components/SEO";
