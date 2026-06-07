@@ -2,10 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 
 import omnieHeroBanner from "../assets/omnie-hero-banner.webp";
-import omniePrawda from "../assets/icons/omnie-prawda.webp";
-import omnieNiezaleznosc from "../assets/icons/omnie-niezaleznosc.webp";
-import omnieWrazliwosc from "../assets/icons/omnie-wrazliwosc.webp";
-import omnieLojalnosc from "../assets/icons/omnie-lojalnosc.webp";
+import omniePrawda from "../assets/icons/omnie-prawda-small.webp";
+import omnieNiezaleznosc from "../assets/icons/omnie-niezaleznosc-small.webp";
+import omnieWrazliwosc from "../assets/icons/omnie-wrazliwosc-small.webp";
+import omnieLojalnosc from "../assets/icons/omnie-lojalnosc-small.webp";
 import omnieCytat from "../assets/omnie-cytat.webp";
 
 import Sidebar from "../components/Sidebar";
@@ -58,11 +58,10 @@ const values = [
 ];
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 45, filter: "blur(8px)" },
+  hidden: { opacity: 0, y: 45 },
   visible: {
     opacity: 1,
     y: 0,
-    filter: "blur(0px)",
     transition: { duration: 0.9, ease: "easeOut" },
   },
 };
