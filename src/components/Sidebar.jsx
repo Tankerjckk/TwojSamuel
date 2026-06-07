@@ -7,12 +7,12 @@ import logo from "../assets/logo.webp";
 export default function Sidebar({ active }) {
   const [open, setOpen] = React.useState(false);
 
-  const navItems = [
-    { label: "Strona główna", shortLabel: "Start", path: "/" },
-    { label: "Muzyka", path: "/muzyka" },
-    { label: "O mnie", path: "/omnie" },
-    { label: "Kontakt", path: "/kontakt" },
-  ];
+const navItems = [
+  { label: "Start", ariaLabel: "Strona główna TwójSamuel", path: "/" },
+  { label: "Muzyka", path: "/muzyka" },
+  { label: "O mnie", path: "/omnie" },
+  { label: "Kontakt", path: "/kontakt" },
+];
 
   const socialItems = [
     {
@@ -79,7 +79,7 @@ export default function Sidebar({ active }) {
 <Link
   key={item.path}
   to={item.path}
-  aria-label={item.path === "/" ? "Strona główna TwójSamuel" : item.label}
+  aria-label={item.ariaLabel || item.label}
   className={`block transition hover:text-white ${
     active === item.path
       ? "border-l border-white pl-4 text-white"
@@ -151,7 +151,7 @@ export default function Sidebar({ active }) {
   key={item.path}
   to={item.path}
   onClick={closeMenu}
-  aria-label={item.path === "/" ? "Strona główna TwójSamuel" : item.label}
+  aria-label={item.ariaLabel || item.label}
   className={`transition hover:text-white ${
     active === item.path
       ? "border-l border-white pl-4 text-white"
