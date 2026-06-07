@@ -179,9 +179,9 @@ export default function OmniePage() {
                     {item.year}
                   </p>
 
-                  <h3 className="mb-5 text-[13px] uppercase tracking-[0.45em] text-white">
+                  <h2 className="mb-5 text-[13px] uppercase tracking-[0.45em] text-white">
                     {item.title}
-                  </h3>
+                  </h2>
 
                   <p className="mx-auto max-w-[210px] text-[13px] leading-[2] tracking-[0.06em] text-zinc-400">
                     {item.text}
