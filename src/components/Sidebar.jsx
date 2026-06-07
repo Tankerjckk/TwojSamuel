@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { FaInstagram, FaYoutube, FaSpotify } from "react-icons/fa";
 
 import logo from "../assets/logo.webp";
+import logoSmall from "../assets/logo-small.webp";
 
 export default function Sidebar({ active }) {
   const [open, setOpen] = React.useState(false);
@@ -66,13 +67,22 @@ const navItems = [
       </button>
 
       <aside className="fixed left-0 top-0 z-50 hidden h-screen w-[180px] border-r border-white/10 bg-black/50 px-6 py-8 xl:block">
-        <Link to="/">
-          <img
-            src={logo}
-            alt="TwójSamuel"
-            className="mb-20 h-14 w-auto object-contain"
-          />
-        </Link>
+<Link to="/">
+  <picture>
+    <source
+      media="(max-width: 1280px)"
+      srcSet={logoSmall}
+    />
+
+    <img
+      src={logo}
+      alt="TwójSamuel"
+      width="180"
+      height="120"
+      className="mb-20 h-14 w-auto object-contain"
+    />
+  </picture>
+</Link>
 
         <nav className="space-y-9 text-[11px] uppercase tracking-[0.35em] text-zinc-500">
           {navItems.map((item) => (
@@ -127,13 +137,15 @@ const navItems = [
   }`}
 >
         <div className="mb-16 flex items-center justify-between">
-          <Link to="/" onClick={closeMenu}>
-            <img
-              src={logo}
-              alt="TwójSamuel"
-              className="h-14 w-auto object-contain"
-            />
-          </Link>
+<Link to="/" onClick={closeMenu}>
+  <img
+    src={logoSmall}
+    alt="TwójSamuel"
+    width="180"
+    height="120"
+    className="h-14 w-auto object-contain"
+  />
+</Link>
 
 <button
   type="button"
