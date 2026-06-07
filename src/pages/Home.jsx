@@ -15,6 +15,7 @@ import {
 import { FaInstagram, FaYoutube, FaSpotify } from "react-icons/fa";
 
 import logo from "../assets/logo.webp";
+import logoSmall from "../assets/logo-small.webp";
 
 import heroBanner from "../assets/hero-banner.webp";
 import heroBannerMobile from "../assets/hero-banner-mobile.webp";
@@ -92,11 +93,20 @@ function Header() {
     <>
       <header className="fixed top-0 left-0 z-50 w-full border-b border-white/10 bg-black/40 backdrop-blur-md">
         <div className="mx-auto flex h-20 w-full max-w-[1700px] items-center justify-between px-8 md:h-24 md:px-12">
-          <img
-            src={logo}
-            alt="TwójSamuel"
-            className="h-16 w-auto object-contain md:h-24"
-          />
+<picture>
+  <source
+    media="(max-width: 768px)"
+    srcSet={logoSmall}
+  />
+
+  <img
+    src={logo}
+    alt="TwójSamuel"
+    width="240"
+    height="160"
+    className="h-16 w-auto object-contain md:h-24"
+  />
+</picture>
 
           <div className="flex items-center gap-6 md:gap-14">
             <nav className="hidden items-center gap-12 text-[11px] uppercase tracking-[0.35em] text-zinc-300 lg:flex">
@@ -178,11 +188,13 @@ function Header() {
         }`}
       >
         <div className="mb-14 flex items-center justify-between">
-          <img
-            src={logo}
-            alt="TwójSamuel"
-            className="h-14 w-auto object-contain"
-          />
+<img
+  src={logoSmall}
+  alt="TwójSamuel"
+  width="180"
+  height="120"
+  className="h-14 w-auto object-contain"
+/>
 
           <button
   type="button"
@@ -827,8 +839,8 @@ function LoadingScreen() {
           }}
         >
           <motion.img
-            src={logo}
-            alt="TwójSamuel"
+  src={logoSmall}
+  alt="TwójSamuel"
             className="h-40 w-auto object-contain md:h-64"
             initial={{
               opacity: 0,
