@@ -31,7 +31,7 @@ export default function PolitykaPrywatnosci() {
   className="px-5 py-28 md:px-14 xl:ml-[180px] xl:px-20"
 >
           <div className="mx-auto max-w-[980px]">
-            <p className="mb-5 text-[11px] uppercase tracking-[0.4em] text-zinc-500">
+            <p className="mb-5 text-[11px] uppercase tracking-[0.4em] text-zinc-400">
               / Dokumenty
             </p>
 
@@ -39,7 +39,7 @@ export default function PolitykaPrywatnosci() {
               Polityka prywatności
             </h1>
 
-            <p className="mb-16 text-[12px] uppercase leading-[2] tracking-[0.25em] text-zinc-500">
+            <p className="mb-16 text-[12px] uppercase leading-[2] tracking-[0.25em] text-zinc-400">
               Ostatnia aktualizacja: 2026
             </p>
 

@@ -764,11 +764,11 @@ const seekAudio = (seconds) => {
 >
         <div className="grid gap-12 lg:grid-cols-[240px_1fr]">
           <div>
-            <p className="mb-12 text-[12px] uppercase tracking-[0.45em] text-zinc-500">
+            <p className="mb-12 text-[12px] uppercase tracking-[0.45em] text-zinc-400">
               / Dyskografia
             </p>
 
-            <p className="max-w-[190px] text-[12px] uppercase leading-[2] tracking-[0.28em] text-zinc-500">
+            <p className="max-w-[190px] text-[12px] uppercase leading-[2] tracking-[0.28em] text-zinc-400">
               Każdy utwór to inny rozdział. Każda historia to część mnie.
             </p>
 
@@ -794,7 +794,7 @@ const seekAudio = (seconds) => {
   </button>
 </div>
 
-<p className="mt-5 text-[10px] uppercase tracking-[0.28em] text-zinc-600">
+<p className="mt-5 text-[10px] uppercase tracking-[0.28em] text-zinc-400">
   {discographyIndex + 1} / {discography.length}
 </p>
           </div>
@@ -832,7 +832,7 @@ const seekAudio = (seconds) => {
                       {track.title}
                     </h3>
 
-                    <p className="text-[9px] uppercase tracking-[0.24em] text-zinc-500 md:text-[10px] md:tracking-[0.32em]">
+                    <p className="text-[9px] uppercase tracking-[0.24em] text-zinc-400 md:text-[10px] md:tracking-[0.32em]">
                       {track.group} • {track.year}
                     </p>
                   </div>
@@ -862,7 +862,7 @@ const seekAudio = (seconds) => {
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.08),transparent_28%)]" />
 
         <div className="relative z-10 mx-auto max-w-[1500px]">
-          <p className="mb-8 text-[11px] uppercase tracking-[0.45em] text-zinc-500">
+          <p className="mb-8 text-[11px] uppercase tracking-[0.45em] text-zinc-400">
             / Muzyka / {activeTrack.title}
           </p>
 
@@ -883,7 +883,7 @@ const seekAudio = (seconds) => {
                 <div className="absolute inset-0 bg-black/10" />
               </div>
 
-              <p className="mt-5 text-[10px] uppercase tracking-[0.3em] text-zinc-500">
+              <p className="mt-5 text-[10px] uppercase tracking-[0.3em] text-zinc-400">
   {activeTrack.group} / CZAS / {formatTime(duration)}
 </p>
             </div>
@@ -912,7 +912,7 @@ const seekAudio = (seconds) => {
     "Opis utworu zostanie dodany później."}
 </p>
 
-              <div className="mt-10 space-y-2 text-[10px] uppercase tracking-[0.32em] text-zinc-600">
+              <div className="mt-10 space-y-2 text-[10px] uppercase tracking-[0.32em] text-zinc-400">
 
               </div>
             </div>
@@ -944,7 +944,7 @@ const seekAudio = (seconds) => {
               className={`pt-3 text-[10px] uppercase tracking-[0.35em] transition duration-500 ${
                 isActive || isPast
                   ? "text-white"
-                  : "text-zinc-600"
+                  : "text-zinc-400"
               }`}
             >
               {item.text}
@@ -960,7 +960,7 @@ const seekAudio = (seconds) => {
               isActive
                 ? "border-l border-white pl-4 text-[15px] scale-[1.03] text-white"
                 : isPast
-                ? "text-zinc-700"
+                ? "text-zinc-400"
                 : "text-zinc-400"
             }`}
           >
@@ -1001,7 +1001,7 @@ Pokaż cały tekst ↗
           {activeTrack.title}
         </p>
 
-        <p className="mt-2 truncate text-[9px] uppercase tracking-[0.28em] text-zinc-500 md:text-[12px] md:tracking-[0.35em]">
+        <p className="mt-2 truncate text-[9px] uppercase tracking-[0.28em] text-zinc-400 md:text-[12px] md:tracking-[0.35em]">
           {activeTrack.group}
         </p>
       </div>
@@ -1096,7 +1096,7 @@ onClick={(e)=>e.stopPropagation()}
 
 <div>
 
-<p className="mb-3 text-[10px] uppercase tracking-[0.35em] text-zinc-500">
+<p className="mb-3 text-[10px] uppercase tracking-[0.35em] text-zinc-400">
 TEKST
 </p>
 
@@ -1113,7 +1113,7 @@ TEKST
   type="button"
   onClick={() => setShowLyricsModal(false)}
   aria-label="Zamknij tekst utworu"
-  className="text-zinc-500 transition hover:text-white"
+  className="text-zinc-400 transition hover:text-white"
 >
   ✕
 </button>
@@ -1136,7 +1136,7 @@ return(
 
 <p
 key={index}
-className="mt-10 mb-5 text-[11px] uppercase tracking-[0.35em] text-zinc-500"
+className="mt-10 mb-5 text-[11px] uppercase tracking-[0.35em] text-zinc-400"
 >
 {item.text}
 </p>
