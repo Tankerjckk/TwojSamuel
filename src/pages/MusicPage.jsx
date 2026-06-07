@@ -22,6 +22,21 @@ import desynchronizacjaCover from "../assets/tracks/desynchronizacja.webp";
 import hotelParasiteCover from "../assets/tracks/hotel-parasite.webp";
 import chanelCover from "../assets/tracks/chanel.webp";
 
+import presjaCoverSmall from "../assets/tracks/presja-small.webp";
+import tostyCoverSmall from "../assets/tracks/tosty-i-hot-dogi-small.webp";
+import mnieTestujCoverSmall from "../assets/tracks/mnie-testuj-small.webp";
+import potencjalCoverSmall from "../assets/tracks/potencjal-small.webp";
+import zycioweTangoCoverSmall from "../assets/tracks/zyciowe-tango-small.webp";
+import jomoCoverSmall from "../assets/tracks/jomo-small.webp";
+import krokiCoverSmall from "../assets/tracks/kroki-small.webp";
+import uniesienieCoverSmall from "../assets/tracks/uniesienie-small.webp";
+import planyIndywidualneCoverSmall from "../assets/tracks/plany-indywidualne-small.webp";
+import samoswiadomoscCoverSmall from "../assets/tracks/samoswiadomosc-small.webp";
+import tubblyCoverSmall from "../assets/tracks/tubbly-small.webp";
+import desynchronizacjaCoverSmall from "../assets/tracks/desynchronizacja-small.webp";
+import hotelParasiteCoverSmall from "../assets/tracks/hotel-parasite-small.webp";
+import chanelCoverSmall from "../assets/tracks/chanel-small.webp";
+
 import preludiumAudio from "../audio/full/1-preludium.mp3";
 import pracyAudio from "../audio/full/2-pracy.mp3";
 import czasuAudio from "../audio/full/3-czasu.mp3";
@@ -85,6 +100,7 @@ const discography = [
   group: "PRESJA",
   type: "album",
   image: presjaCover,
+  imageSmall: presjaCoverSmall,
   audio: preludiumAudio,
   lyricsKey: "preludium",
   description:
@@ -95,7 +111,8 @@ const discography = [
         year: "2026", 
         group: "PRESJA", 
         type: "album", 
-        image: presjaCover, 
+        image: presjaCover,
+        imageSmall: presjaCoverSmall,
         audio: pracyAudio,
         lyricsKey: "pracy",
         description: "Utwór skupia się na presji związanej z pracą, rozwojem i porównywaniem się do innych. Kasia mierzy się z oczekiwaniami awansu, większych zarobków i „lepszego życia”, jednocześnie czując stagnację i zmęczenie. Codzienność zamienia się w powtarzalny schemat, w którym motywacja miesza się z frustracją. Porównania do rówieśników i medialnych sukcesów tylko pogłębiają poczucie, że jest w tyle. To historia o wyścigu, w którym im szybciej biegniesz, tym trudniej zobaczyć sens."
@@ -106,6 +123,7 @@ const discography = [
   group: "PRESJA",
   type: "album",
   image: presjaCover,
+  imageSmall: presjaCoverSmall,
   audio: czasuAudio,
   lyricsKey: "czasu",
   description:
@@ -118,6 +136,7 @@ const discography = [
   group: "PRESJA",
   type: "album",
   image: presjaCover,
+  imageSmall: presjaCoverSmall,
   audio: finansowaAudio,
   lyricsKey: "finansowa",
   description:
@@ -130,6 +149,7 @@ const discography = [
   group: "PRESJA",
   type: "album",
   image: presjaCover,
+  imageSmall: presjaCoverSmall,
   audio: spolecznaAudio,
   lyricsKey: "spoleczna",
   description:
@@ -142,6 +162,7 @@ const discography = [
   group: "PRESJA",
   type: "album",
   image: presjaCover,
+  imageSmall: presjaCoverSmall,
   audio: interludiumAudio,
   lyricsKey: "interludium",
   description:
@@ -160,6 +181,7 @@ const discography = [
   group: "PRESJA",
   type: "album",
   image: presjaCover,
+  imageSmall: presjaCoverSmall,
   audio: jezykaAudio,
   lyricsKey: "jezyka",
   description:
@@ -172,6 +194,7 @@ const discography = [
   group: "PRESJA",
   type: "album",
   image: presjaCover,
+  imageSmall: presjaCoverSmall,
   audio: rodzinyAudio,
   lyricsKey: "rodziny",
   description:
@@ -184,6 +207,7 @@ const discography = [
   group: "PRESJA",
   type: "album",
   image: presjaCover,
+  imageSmall: presjaCoverSmall,
   audio: podrozyAudio,
   lyricsKey: "podrozy",
   description:
@@ -196,6 +220,7 @@ const discography = [
   group: "PRESJA",
   type: "album",
   image: presjaCover,
+  imageSmall: presjaCoverSmall,
   audio: zdrowegoZyciaAudio,
   lyricsKey: "zdrowegozycia",
   description:
@@ -208,6 +233,7 @@ const discography = [
   group: "PRESJA",
   type: "album",
   image: presjaCover,
+  imageSmall: presjaCoverSmall,
   audio: toOstatnieLudiumAudio,
   lyricsKey: "ostatnieludium",
   description:
@@ -225,7 +251,8 @@ const discography = [
         year: "2024", 
         group: "TOSTY I HOT-DOGI", 
         type: "album", 
-        image: tostyCover, 
+        image: tostyCover,
+        imageSmall: tostyCoverSmall, 
         audio: bouncingAudio,
         description:
     "To otwarcie EP „TOSTY I HOT-DOGI”. Numer opowiada o wakacjach, miłościach, marzeniach oraz wszystkich dobrych i złych decyzjach, które pojawiały się po drodze. To ciągła pogoń za miłością, sławą i zabawą. W chwilach upadku wraca tęsknota za przeszłością, a w momentach wyżyn pojawia się głód jeszcze większych emocji. Ostatecznie wszystko kończy się porannym zjazdem i pustką. Utwór jest zbiorem emocji oraz listem skierowanym do romantycznych uczuć.",
@@ -236,7 +263,8 @@ const discography = [
         year: "2024", 
         group: "TOSTY I HOT-DOGI", 
         type: "album", 
-        image: tostyCover, 
+        image: tostyCover,
+        imageSmall: tostyCoverSmall,  
         audio: dniAudio,
         description:
         "Tytuł nawiązuje do mojego ulubionego typu horroru. Utwór opowiada o momentach, w których wszystko zaczyna układać się po mojej myśli, a ja w końcu znajduję czas dla siebie. Przez długi czas towarzyszyła mi presja, która nie pozwalała odpocząć nawet przez chwilę. „to mój dzień” jest momentem przełamania, w którym zamiast martwić się przyszłością, zaczynam po prostu tworzyć. To także podziękowanie dla ludzi, którzy zostali obok mimo mojej ciszy i zapowiedź powrotu po dłuższym czasie.",
@@ -247,7 +275,8 @@ const discography = [
         year: "2024", 
         group: "TOSTY I HOT-DOGI", 
         type: "album", 
-        image: tostyCover, 
+        image: tostyCover,
+        imageSmall: tostyCoverSmall,  
         audio: twojAdrianAudio,
         description:
         "To hołd i prezent urodzinowy dla mojego starszego brata. W trakcie swojej muzycznej podróży dostałem od niego wsparcie, którego nie da się opisać. Cały utwór został napisany z perspektywy Adriana i prowadzi przez kolejne etapy jego życia, od pierwszego mieszkania aż do momentu powstawania tego tekstu. Numer jest pełen inside joke’ów, wspomnień i charakterystycznych momentów związanych z osobą, bez której ta EP prawdopodobnie nigdy by nie powstała.",
@@ -257,8 +286,9 @@ const discography = [
         title: "AKT 1", 
         year: "2024", 
         group: "TOSTY I HOT-DOGI", 
-        type: "album", image: 
-        tostyCover, 
+        type: "album", 
+        image: tostyCover,
+        imageSmall: tostyCoverSmall,  
         audio: aktAudio,
         description:
         "Opowiadam o alternatywnej rzeczywistości, w której w ułamku sekundy udaje mi się osiągnąć wszystko, czego kiedykolwiek pragnąłem, a cały ten sukces zaczyna mnie przytłaczać. Dni stają się powtarzalne, tracę własne zasady moralne i przestaję czerpać satysfakcję z drogi ku świetności, ponieważ już ją przeszedłem. Przedstawiam tutaj swoje obawy i lęk przed tym, że osiągnięcie wielkości nie da mi prawdziwego szczęścia, a wszystko, czego pragnąłem, stanie się źródłem największego cierpienia.",
@@ -268,8 +298,9 @@ const discography = [
         title: "FOMO", 
         year: "2024", 
         group: "TOSTY I HOT-DOGI", 
-        type: "album", image: 
-        tostyCover, 
+        type: "album", 
+        image: tostyCover, 
+        imageSmall: tostyCoverSmall, 
         audio: fomoAudio,
         description:
         "To historia spotkania dwóch wersji mnie. Jedna z nich odpuściła pogoń za sztucznie wykreowanym szczęściem, które narzuca społeczeństwo. Druga to najlepsza wersja samego siebie, wolna od FOMO, presji i ciągłego stresu.",
@@ -280,7 +311,8 @@ const discography = [
         year: "2024", 
         group: "TOSTY I HOT-DOGI", 
         type: "album", 
-        image: tostyCover, 
+        image: tostyCover,
+        imageSmall: tostyCoverSmall,  
         audio: nostalgiaAudio,
         description:
         "To nostalgia za czasami, w których poznałem najwięcej ludzi w swoim życiu, a każde wyjście na miasto kończyło się nową historią i nowymi znajomościami. Momentem, gdy największym problemem były pieniądze na alkohol i oceny w USOS-ie. Nie tęsknię już za tym, ale był to moment życia, w którym nikt jeszcze nie chciał być kimś, a każdy chciał po prostu poznać siebie.",
@@ -291,7 +323,8 @@ const discography = [
         year: "2024", 
         group: "TOSTY I HOT-DOGI", 
         type: "album", 
-        image: tostyCover, 
+        image: tostyCover,
+        imageSmall: tostyCoverSmall,  
         audio: pingwinyAudio,
         description:
         "To utwór o rasizmie, strachu i dezinformacji. Mówię o nienawiści, która nie rodzi się z faktów, ale z emocji i lęku przed tym, co obce. Każda kolejna obawa przed drugim człowiekiem tworzy strach przekazywany dalej naszym bliskim, przez co świat staje się coraz bardziej czarno-biały. Brak akceptacji zmian i niechęć do spojrzenia na innych z empatią sprawiają, że ranimy nie tylko otoczenie, ale również samych siebie. Ta spirala będzie trwała, dopóki nie zaczniemy dostrzegać własnych emocji i historii w innych ludziach.",
@@ -309,6 +342,7 @@ const discography = [
         group: "HOTEL PARASITE", 
         type: "album", 
         image: hotelParasiteCover, 
+        imageSmall: hotelParasiteCoverSmall,
         audio: hotelParasiteAudio,
         description:
         "Hotel Parasite” opowiada o pracy, która z czasem zaczęła wydawać się bezcelowa. Na tym etapie życia czułem, że przestałem rozwijać się i uczyć nowych rzeczy. Pojawiło się znudzenie oraz potrzeba nowych doświadczeń. „Hotel Parasite” otwiera EP opowiadające o chwilowym zaniku emocji w moim życiu.",
@@ -320,6 +354,7 @@ const discography = [
         group: "HOTEL PARASITE", 
         type: "album", 
         image: hotelParasiteCover, 
+        imageSmall: hotelParasiteCoverSmall,
         audio: theBetAudio,
         description:
         "Opowiadam o życiu chwilą i braku patrzenia na konsekwencje. Podejście do dziewczyn zostało ukształtowane przez dziesiątki podobnych randek, a sytuacja przedstawiona w utworze jest na tyle powtarzalna, że mogłaby stać się schematem. Właśnie dlatego traktuję to spotkanie w tak chłodny sposób. To wprowadzenie do świata, w którym gesty i słowa rzadko są szczere, a większość z nich ma prowadzić do konkretnego celu.",
@@ -330,7 +365,8 @@ const discography = [
         year: "2023", 
         group: "HOTEL PARASITE", 
         type: "album", 
-        image: hotelParasiteCover, 
+        image: hotelParasiteCover,
+        imageSmall: hotelParasiteCoverSmall,
         audio: wycieczkaAudio,
         description:
         "To druga część „CHANEL”. Utwór opowiada o życiu opartym na chwilowych potrzebach i schematach, z których próbuję się wyrwać, ale ciągle do nich wracam. Z czasem pojawia się refleksja nad tym, kim byłem, kim chciałem zostać i co muszę poświęcić, żeby faktycznie zmienić siebie na lepsze.",
@@ -341,7 +377,8 @@ const discography = [
         year: "2023", 
         group: "HOTEL PARASITE", 
         type: "album", 
-        image: hotelParasiteCover, 
+        image: hotelParasiteCover,
+        imageSmall: hotelParasiteCoverSmall,
         audio: summerFashionAudio,
         description:
         "To historia z wakacji opowiedziana od końca. Najpierw pojawia się mieszkanie dziewczyny, później rozmowa z nią w klubie, a dopiero na końcu moment poznania. Sama dziewczyna nie ma tu większego znaczenia. Stała się jedynie impulsem, który zmienił kierunek moich myśli. To właśnie wtedy narodził się pomysł na tę EP.",
@@ -352,7 +389,8 @@ const discography = [
         year: "2023", 
         group: "HOTEL PARASITE", 
         type: "album", 
-        image: hotelParasiteCover, 
+        image: hotelParasiteCover,
+        imageSmall: hotelParasiteCoverSmall,
         audio: milosnaPiosenkaAudio,
         description:
         "To historia krótkiej relacji, która od początku była skazana na koniec. Utwór opowiada o dwójce ludzi będących w tym samym momencie życia, etapie prób, błędów i ciągłego szukania siebie. Oboje żyją chwilą i nie wybiegają myślami w przyszłość. Wszystko kończy się w momencie, gdy jedna z tych osób decyduje się ruszyć dalej, szukając progresu i czegoś więcej niż chwilowego komfortu.",
@@ -363,7 +401,8 @@ const discography = [
         year: "2023", 
         group: "HOTEL PARASITE", 
         type: "album", 
-        image: hotelParasiteCover, 
+        image: hotelParasiteCover,
+        imageSmall: hotelParasiteCoverSmall,
         audio: topAudio,
         description:
         "To zwieńczenie EP „Hotel Parasite”. Po wszystkich wcześniejszych historiach w końcu wybieram progres, którego od dawna mi brakowało. Odcinam relacje ciągnące mnie w dół i zaczynam skupiać się na sobie, mimo że cały czas wracają dawne emocje i wspomnienia. To moment podjęcia decyzji, żeby iść do przodu bez oglądania się na to, kto zostanie obok mnie.",
@@ -380,7 +419,8 @@ const discography = [
         year: "2024", 
         group: "SINGLE", 
         type: "single", 
-        image: mnieTestujCover, 
+        image: mnieTestujCover,
+        imageSmall: mnieTestujCoverSmall, 
         audio: mnieTestujAudio,
         description:
         "To utwór o relacjach opartych wyłącznie na chwilowych potrzebach i fizyczności. O obustronnej świadomości, że żadna ze stron nie chce poznawać się głębiej. Z czasem całkowicie przestaję myśleć o konsekwencjach swoich działań, zarówno psychicznych, jak i fizycznych. Wszystko zmienia się dopiero przy spotkaniu tej konkretnej dziewczyny, która brutalnie wybija mi taki sposób myślenia z głowy. Gdybym wierzył w karmę, uznałbym, że wtedy do mnie wróciła.",
@@ -391,7 +431,8 @@ const discography = [
         year: "2024", 
         group: "SINGLE", 
         type: "single", 
-        image: potencjalCover, 
+        image: potencjalCover,
+        imageSmall: potencjalCoverSmall,
         audio: potencjalAudio,
         description:
         "„Potencjał” opowiada o tym, jak świadomość własnego talentu potrafi stać się wewnętrzną blokadą i prowadzić do prokrastynacji. Utwór został podzielony na dwie części. Pierwsza pokazuje chaos myśli podczas wyjścia do miasta, pobytu w klubie i przypadkowego spotkania przy barze. Druga to moment pozostania samemu ze sobą po decyzji o niewychodzeniu z domu. W obu odsłonach próbuję znaleźć powód, przez który wciąż odkładam rozpoczęcie drogi po własną karierę.",
@@ -402,7 +443,8 @@ const discography = [
         year: "2024", 
         group: "SINGLE", 
         type: "single", 
-        image: zycioweTangoCover, 
+        image: zycioweTangoCover,
+        imageSmall: zycioweTangoCoverSmall,
         audio: zycioweTangoAudio,
         description:
         "Ten utwór jest moim hołdem dla czasów tuż po przeprowadzce do Warszawy. Dla okresu młodości, w którym nie istnieje jeszcze presja posiadania rodziny, domu czy stabilnej pracy. Problemy tamtych dni miały wtedy dla mnie taką samą wagę jak te obecne, choć z perspektywy czasu wydają się błahe, a czasem nawet zabawne. To opowieść o podstawowych potrzebach, takich jak miłość, pieniądze i czas, w momencie, w którym mam świadomość, że nadal jestem młody i wciąż mam na wszystko czas.",
@@ -413,7 +455,8 @@ const discography = [
         year: "2024", 
         group: "SINGLE", 
         type: "single", 
-        image: jomoCover, 
+        image: jomoCover,
+        imageSmall: jomoCoverSmall, 
         audio: jomoAudio,
         description:
         "To pierwszy miesiąc po sytuacji z „Kroki”. Gonitwa za „krótkimi emocjami” powoli ustaje, a ja próbuję wyżyć się muzycznie poprzez własne przemyślenia. Ten utwór jest eksperymentem zarówno pod względem stylu, jak i tematu. Tęsknotę za dawnym stylem życia ukrywam pod blantami i spotkaniami z przyjaciółmi, którzy wspierali mnie w drodze po kolejnych szczeblach muzycznej kariery. W pewnym sensie jest to ucieczka ze skrajności w skrajność, od nadmiaru wyjść i braku prawdziwych wspomnień do nadmiaru wolnego czasu i życia bez robienia czegokolwiek na siłę.",
@@ -423,7 +466,8 @@ const discography = [
         year: "2024", 
         group: "SINGLE", 
         type: "single", 
-        image: krokiCover, 
+        image: krokiCover,
+        imageSmall: krokiCoverSmall, 
         audio: krokiAudio,
         description:
         "W tamtym momencie zdałem sobie sprawę, że wszystkie wspomnienia zaczynają wyglądać tak samo. W pogoni za różnorodnością odkryłem jedynie powtarzający się schemat. Ciągła gonitwa za krótkimi emocjami sprawiła, że przestałem szukać doświadczeń, które naprawdę mogłyby coś znaczyć i zostać ze mną na dłużej. Podczas tworzenia tego utworu podjąłem decyzję o zmianie. Właśnie wtedy zaczął kończyć się pewien etap mojego życia, choć sam proces trwał jeszcze długo.",
@@ -440,7 +484,8 @@ const discography = [
         year: "2024", 
         group: "SINGLE", 
         type: "single", 
-        image: uniesienieCover, 
+        image: uniesienieCover,
+        imageSmall: uniesienieCoverSmall, 
         audio: uniesienieAudio,
         description:
         "To opowieść o dwóch osobach, którym mogło udać się tylko w tym konkretnym momencie życia. Nie ma już znaczenia to, co naprawdę chcą sobie przekazać, bo cała sytuacja powstała wyłącznie pod wpływem silnych emocji tamtego dnia. To historia relacji, w której obie strony wykorzystują swoją wzajemną wrażliwość, mając pełną świadomość tej gry. Mimo wszystko właśnie ona sprawia, że następnego dnia czują się ze sobą trochę lepiej.",
@@ -450,7 +495,8 @@ const discography = [
         year: "2024", 
         group: "SINGLE", 
         type: "single", 
-        image: planyIndywidualneCover, 
+        image: planyIndywidualneCover,
+        imageSmall: planyIndywidualneCoverSmall, 
         audio: planyIndywidualneAudio,
         description:
         "Utwór jest moim wyobrażeniem momentu, w którym osiągam sukces muzyczny. Opowiadam o tym, w jaki sposób mogłoby do tego dojść oraz jakie obawy pojawiają się teraz, zestawione z tymi, które wyobrażam sobie w przyszłości. W momencie pisania, utwór był jednocześnie teraźniejszością i przyszłością, która nigdy nie istniała i prawdopodobnie nigdy nie nadejdzie.",
@@ -468,6 +514,7 @@ const discography = [
         group: "SINGLE",
         type: "single",
         image: samoswiadomoscCover,
+        imageSmall: samoswiadomoscCoverSmall,
         audio: samoswiadomoscAudio,
         description:
         "To historia z wakacji opowiedziana od końca. Najpierw pojawia się mieszkanie dziewczyny, później rozmowa z nią w klubie, a dopiero na końcu moment poznania. Sama dziewczyna nie ma tu większego znaczenia. Stała się jedynie impulsem, który zmienił kierunek moich myśli. To właśnie wtedy narodził się pomysł na tę EP.",
@@ -485,6 +532,7 @@ const discography = [
         group: "SINGLE",
         type: "single",
         image: desynchronizacjaCover,
+        imageSmall: desynchronizacjaCoverSmall,
         audio: desynchronizacjaAudio,
         description:
         "Ten utwór ma zachęcić do rozmowy z bliskimi. Czasem samo wypowiedzenie na głos tego, co siedzi w głowie, potrafi sprawić, że człowiek przestaje czuć się samotny. Nie powinno się wstydzić własnych emocji, bo właśnie one są jedną z najbardziej prawdziwych i najpiękniejszych rzeczy, jakie mamy.",
@@ -494,7 +542,8 @@ const discography = [
         year: "2023", 
         group: "SINGLE", 
         type: "single", 
-        image: chanelCover, 
+        image: chanelCover,
+        imageSmall: chanelCoverSmall, 
         audio: chanelAudio,
         description:
         "„CHANEL” zaczyna się od rozmowy między wersją mnie po przeprowadzce na studia do Warszawy a tą, która nadal żyje na wsi z rodzicami. Opowiadam o życiu chwilą, takim, w którym noc pozbawiona realnych problemów przyćmiewa wszystkie dni. Obserwuję zmianę swojego podejścia do pracy, miłości i szacunku do samego siebie. „CHANEL” to przemyślenia pojawiające się podczas powrotów do domu o 5 rano po piątkowych imprezach.",
@@ -822,8 +871,12 @@ const seekAudio = (seconds) => {
                   }`}
                 >
                   <img
-                    src={track.image}
+                    src={track.imageSmall || track.image}
                     alt={track.title}
+                    width="120"
+                    height="120"
+                    loading="lazy"
+                    decoding="async"
                     className="h-[86px] w-[86px] object-cover opacity-75 transition group-hover:opacity-100 md:h-[120px] md:w-[120px]"
                   />
 
@@ -874,11 +927,21 @@ const seekAudio = (seconds) => {
                   REC
                 </span>
 
-                <img
-                  src={activeTrack.image}
-                  alt={activeTrack.title}
-                  className="aspect-square w-full object-cover opacity-90"
-                />
+<picture>
+  <source
+    media="(max-width: 768px)"
+    srcSet={activeTrack.imageSmall || activeTrack.image}
+  />
+
+  <img
+    src={activeTrack.image}
+    alt={activeTrack.title}
+    width="600"
+    height="600"
+    decoding="async"
+    className="aspect-square w-full object-cover opacity-90"
+  />
+</picture>
 
                 <div className="absolute inset-0 bg-black/10" />
               </div>
@@ -990,11 +1053,14 @@ Pokaż cały tekst ↗
       <div className="fixed bottom-0 left-0 z-40 w-full border-t border-white/10 bg-black/85 backdrop-blur-md xl:pl-[180px]">
   <div className="grid h-[88px] grid-cols-[1fr_auto] items-center gap-4 px-4 md:h-[110px] md:grid-cols-[minmax(0,1fr)_auto_auto] md:px-10">
     <div className="flex min-w-0 items-center gap-4 md:gap-5">
-      <img
-        src={activeTrack.image}
-        alt={activeTrack.title}
-        className="h-14 w-14 shrink-0 border border-white/10 object-cover opacity-90 md:h-20 md:w-20"
-      />
+<img
+  src={activeTrack.imageSmall || activeTrack.image}
+  alt={activeTrack.title}
+  width="80"
+  height="80"
+  decoding="async"
+  className="h-14 w-14 shrink-0 border border-white/10 object-cover opacity-90 md:h-20 md:w-20"
+/>
 
       <div className="min-w-0">
         <p className="max-w-[150px] truncate text-[13px] uppercase tracking-[0.28em] text-white sm:max-w-[260px] md:max-w-none md:text-[24px] md:tracking-[0.45em]">
