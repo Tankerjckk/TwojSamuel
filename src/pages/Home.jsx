@@ -295,10 +295,12 @@ function Hero() {
       >
         <source media="(max-width: 768px)" srcSet={heroBannerMobile} />
         <img
-          src={heroBanner}
-          alt="Hero Banner"
-          className="h-full w-full object-cover"
-        />
+  src={heroBanner}
+  alt="Hero Banner"
+  fetchPriority="high"
+  loading="eager"
+  className="h-full w-full object-cover"
+/>
       </motion.picture>
 
       <div className="absolute inset-0 bg-black/25" />
@@ -685,65 +687,81 @@ function AboutSection() {
   });
 
   return (
-    <section
-      ref={sectionRef}
-      id="omnie"
-      className="relative overflow-hidden border-t border-white/10 bg-black px-5 py-20 md:px-10 md:py-24"
-    >
-      <div className="mx-auto grid max-w-[1700px] grid-cols-1 items-center gap-14 lg:grid-cols-[0.9fr_0.8fr_0.9fr] lg:gap-12">
-        <motion.div
-          variants={fadeLeft}
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-          className="relative flex justify-center"
-        >
-          <img src={aboutme2} alt="TwójSamuel" className="max-h-[430px] w-auto rotate-[-3deg] border border-white/10 object-contain opacity-90 shadow-2xl md:max-h-[520px] md:rotate-[-4deg]" />
-        </motion.div>
-
-        <motion.div
-          variants={fadeUp}
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-          className="relative z-10 border-y border-white/10 py-12 text-center md:py-14"
-        >
-          <p className="mb-5 text-[10px] uppercase tracking-[0.38em] text-zinc-400 md:tracking-[0.5em]">
-            To nie rap. To dziennik.
-          </p>
-
-          <h2 className="mb-9 text-[24px] uppercase tracking-[0.24em] text-white md:text-[28px] md:tracking-[0.28em]">
-            Kim jestem?
-          </h2>
-
-          <div className="space-y-3 text-[13px] leading-[2] tracking-[0.06em] text-zinc-300">
-            <p>Myślę, że jestem taki sam jak wszyscy.</p>
-            <p>Nie chcę nikomu nic udowadniać.</p>
-            <p>Tworzę muzykę, bo ją kocham,</p>
-            <p>a każdy utwór jest dla mnie</p>
-            <p>zapisem wspomnień,</p>
-            <p>poglądów i emocji z danego okresu życia.</p>
-          </div>
-
-<Link
-  to="/omnie"
-  className="group mx-auto mt-10 flex w-fit items-center gap-5 border-b border-white/25 pb-3 text-[10px] uppercase tracking-[0.35em] text-white transition hover:border-white"
+ <section
+  ref={sectionRef}
+  id="omnie"
+  className="relative overflow-hidden border-t border-white/10 bg-black px-5 py-20 md:px-10 md:py-24"
 >
-  Więcej o mnie
-  <span className="transition group-hover:translate-x-1">
-    →
-  </span>
-</Link>
-        </motion.div>
+  <div className="mx-auto grid max-w-[1700px] grid-cols-1 items-center gap-14 lg:grid-cols-[0.9fr_0.8fr_0.9fr] lg:gap-12">
+    <motion.div
+      variants={fadeLeft}
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
+      className="relative flex justify-center"
+    >
+      <img
+        src={aboutme2}
+        alt="TwójSamuel"
+        width="800"
+        height="1000"
+        loading="lazy"
+        decoding="async"
+        className="max-h-[430px] w-auto rotate-[-3deg] border border-white/10 object-contain opacity-90 shadow-2xl md:max-h-[520px] md:rotate-[-4deg]"
+      />
+    </motion.div>
 
-        <motion.div
-          variants={fadeRight}
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-          className="relative flex justify-center"
-        >
-          <img src={aboutme1} alt="TwójSamuel live" className="max-h-[360px] w-auto rotate-[3deg] border border-white/10 object-contain opacity-85 shadow-2xl md:max-h-[420px] md:rotate-[5deg]" />
-        </motion.div>
+    <motion.div
+      variants={fadeUp}
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
+      className="relative z-10 border-y border-white/10 py-12 text-center md:py-14"
+    >
+      <p className="mb-5 text-[10px] uppercase tracking-[0.38em] text-zinc-400 md:tracking-[0.5em]">
+        To nie rap. To dziennik.
+      </p>
+
+      <h2 className="mb-9 text-[24px] uppercase tracking-[0.24em] text-white md:text-[28px] md:tracking-[0.28em]">
+        Kim jestem?
+      </h2>
+
+      <div className="space-y-3 text-[13px] leading-[2] tracking-[0.06em] text-zinc-300">
+        <p>Myślę, że jestem taki sam jak wszyscy.</p>
+        <p>Nie chcę nikomu nic udowadniać.</p>
+        <p>Tworzę muzykę, bo ją kocham,</p>
+        <p>a każdy utwór jest dla mnie</p>
+        <p>zapisem wspomnień,</p>
+        <p>poglądów i emocji z danego okresu życia.</p>
       </div>
-    </section>
+
+      <Link
+        to="/omnie"
+        className="group mx-auto mt-10 flex w-fit items-center gap-5 border-b border-white/25 pb-3 text-[10px] uppercase tracking-[0.35em] text-white transition hover:border-white"
+      >
+        Więcej o mnie
+        <span className="transition group-hover:translate-x-1" aria-hidden="true">
+          →
+        </span>
+      </Link>
+    </motion.div>
+
+    <motion.div
+      variants={fadeRight}
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
+      className="relative flex justify-center"
+    >
+      <img
+        src={aboutme1}
+        alt="TwójSamuel live"
+        width="800"
+        height="450"
+        loading="lazy"
+        decoding="async"
+        className="max-h-[360px] w-auto rotate-[3deg] border border-white/10 object-contain opacity-85 shadow-2xl md:max-h-[420px] md:rotate-[5deg]"
+      />
+    </motion.div>
+  </div>
+</section>
   );
 }
 
@@ -816,9 +834,9 @@ function LoadingScreen() {
   const [isLoading, setIsLoading] = React.useState(true);
 
   React.useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 1800);
+const timer = setTimeout(() => {
+  setIsLoading(false);
+}, 300);
 
     return () => clearTimeout(timer);
   }, []);
