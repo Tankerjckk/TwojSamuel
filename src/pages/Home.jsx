@@ -838,10 +838,18 @@ function LoadingScreen() {
             },
           }}
         >
-          <motion.img
-  src={logoSmall}
-  alt="TwójSamuel"
-            className="h-40 w-auto object-contain md:h-64"
+          <motion.picture>
+  <source
+    media="(max-width: 768px)"
+    srcSet={logoSmall}
+  />
+
+  <motion.img
+    src={logo}
+    alt="TwójSamuel"
+    width="240"
+    height="160"
+    className="h-40 w-auto object-contain md:h-64"
             initial={{
               opacity: 0,
               scale: 0.9,
@@ -857,6 +865,7 @@ function LoadingScreen() {
               ease: "easeOut",
             }}
           />
+          </motion.picture>
 
           <motion.div
             className="absolute bottom-12 left-1/2 h-px w-32 -translate-x-1/2 overflow-hidden bg-white/10"
