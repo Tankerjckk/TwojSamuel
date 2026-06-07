@@ -35,18 +35,30 @@ export default function Kontakt() {
   description="Skontaktuj się z TwójSamuel. Współpraca, pytania i kontakt."
   url="/kontakt"
 />
-    <main className="min-h-screen bg-black text-white">
+    <a
+  href="#formularz-kontaktowy"
+  className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[10000] focus:bg-white focus:px-5 focus:py-3 focus:text-[12px] focus:font-bold focus:uppercase focus:tracking-[0.2em] focus:text-black"
+>
+  Przejdź do treści
+</a>
+
+<main
+  id="main-content"
+  tabIndex="-1"
+  className="min-h-screen bg-black text-white"
+>
       <Sidebar active="/kontakt" />
 
       <section className="relative min-h-[100svh] overflow-hidden border-b border-white/10 bg-black xl:ml-[180px]">
   <picture>
     <source media="(max-width: 768px)" srcSet={kontaktHeroBannerMobile} />
 
-    <img
-      src={kontaktHeroBanner}
-      alt="Kontakt"
-      className="absolute inset-0 h-full w-full object-cover opacity-80"
-    />
+<img
+  src={kontaktHeroBanner}
+  alt=""
+  aria-hidden="true"
+  className="absolute inset-0 h-full w-full object-cover opacity-80"
+/>
   </picture>
 
   <div className="absolute inset-0 bg-black/40 md:bg-black/30" />
@@ -79,7 +91,11 @@ export default function Kontakt() {
   </motion.div>
 </section>
 
-<section className="bg-black px-5 py-16 md:px-14 md:py-24 xl:ml-[180px] xl:px-20">
+<section
+  id="formularz-kontaktowy"
+  tabIndex="-1"
+  className="bg-black px-5 py-16 md:px-14 md:py-24 xl:ml-[180px] xl:px-20"
+>
   <motion.div
     className="mx-auto grid max-w-[1500px] gap-16 lg:grid-cols-[1.2fr_0.8fr]"
     variants={fadeUp}
@@ -104,38 +120,68 @@ export default function Kontakt() {
         <input type="hidden" name="subject" value="Nowa wiadomość ze strony TwojSamuel.pl" />
 
         <div className="grid gap-5 md:grid-cols-2">
-          <input
-            type="text"
-            name="name"
-            required
-            placeholder="Imię i nazwisko"
-            className="h-14 border border-white/15 bg-transparent px-5 text-[11px] uppercase tracking-[0.22em] text-white outline-none transition placeholder:text-zinc-500 focus:border-white/50 md:tracking-[0.35em]"
-          />
+<div>
+  <label htmlFor="name" className="sr-only">
+    Imię i nazwisko
+  </label>
 
-          <input
-            type="email"
-            name="email"
-            required
-            placeholder="E-mail"
-            className="h-14 border border-white/15 bg-transparent px-5 text-[11px] uppercase tracking-[0.22em] text-white outline-none transition placeholder:text-zinc-500 focus:border-white/50 md:tracking-[0.35em]"
-          />
-        </div>
+  <input
+    id="name"
+    type="text"
+    name="name"
+    required
+    autoComplete="name"
+    placeholder="Imię i nazwisko"
+    className="h-14 w-full border border-white/15 bg-transparent px-5 text-[11px] uppercase tracking-[0.22em] text-white outline-none transition placeholder:text-zinc-500 focus:border-white/50 md:tracking-[0.35em]"
+  />
+</div>
 
-        <input
-          type="text"
-          name="topic"
-          required
-          placeholder="Temat"
-          className="h-14 border border-white/15 bg-transparent px-5 text-[11px] uppercase tracking-[0.22em] text-white outline-none transition placeholder:text-zinc-500 focus:border-white/50 md:tracking-[0.35em]"
-        />
+<div>
+  <label htmlFor="email" className="sr-only">
+    E-mail
+  </label>
 
-<textarea
-  name="message"
-  required
-  placeholder="Wiadomość"
-  rows="7"
-  className="resize-none border border-white/15 bg-transparent px-5 py-5 text-[11px] uppercase tracking-[0.22em] text-white outline-none transition placeholder:text-zinc-500 focus:border-white/50 md:tracking-[0.35em]"
-/>
+  <input
+    id="email"
+    type="email"
+    name="email"
+    required
+    autoComplete="email"
+    placeholder="E-mail"
+    className="h-14 w-full border border-white/15 bg-transparent px-5 text-[11px] uppercase tracking-[0.22em] text-white outline-none transition placeholder:text-zinc-500 focus:border-white/50 md:tracking-[0.35em]"
+  />
+</div>
+ </div>
+
+<div>
+  <label htmlFor="topic" className="sr-only">
+    Temat
+  </label>
+
+  <input
+    id="topic"
+    type="text"
+    name="topic"
+    required
+    placeholder="Temat"
+    className="h-14 w-full border border-white/15 bg-transparent px-5 text-[11px] uppercase tracking-[0.22em] text-white outline-none transition placeholder:text-zinc-500 focus:border-white/50 md:tracking-[0.35em]"
+  />
+</div>
+
+<div>
+  <label htmlFor="message" className="sr-only">
+    Wiadomość
+  </label>
+
+  <textarea
+    id="message"
+    name="message"
+    required
+    placeholder="Wiadomość"
+    rows="7"
+    className="w-full resize-none border border-white/15 bg-transparent px-5 py-5 text-[11px] uppercase tracking-[0.22em] text-white outline-none transition placeholder:text-zinc-500 focus:border-white/50 md:tracking-[0.35em]"
+  />
+</div>
 
 <label className="flex items-start gap-4 border border-white/10 p-5">
   <input
@@ -180,7 +226,9 @@ export default function Kontakt() {
           className="group mt-2 flex h-16 w-full items-center justify-between border border-white/25 px-6 text-[10px] uppercase tracking-[0.28em] text-white transition hover:border-white md:max-w-[360px] md:px-8 md:text-[11px] md:tracking-[0.35em]"
         >
           Wyślij wiadomość
-          <span className="transition group-hover:translate-x-1">→</span>
+          <span className="transition group-hover:translate-x-1" aria-hidden="true">
+            →
+          </span>
         </button>
       </form>
     </div>
@@ -194,7 +242,11 @@ export default function Kontakt() {
 
       <div className="space-y-12">
         <div className="flex gap-5">
-          <FiMail size={22} className="mt-1 text-zinc-300" />
+          <FiMail
+  size={22}
+  className="mt-1 text-zinc-300"
+  aria-hidden="true"
+/>
           <div>
             <h4 className="mb-3 text-[12px] uppercase tracking-[0.35em] text-white">
               E-mail
@@ -206,7 +258,11 @@ export default function Kontakt() {
         </div>
 
         <div className="flex gap-5">
-          <FaInstagramSquare size={22} className="mt-1 text-zinc-300" />
+          <FaInstagramSquare
+  size={22}
+  className="mt-1 text-zinc-300"
+  aria-hidden="true"
+/>
           <div>
             <h4 className="mb-3 text-[12px] uppercase tracking-[0.35em] text-white">
               Instagram
@@ -216,7 +272,11 @@ export default function Kontakt() {
         </div>
 
         <div className="flex gap-5">
-          <FiMapPin size={22} className="mt-1 text-zinc-300" />
+          <FiMapPin
+  size={22}
+  className="mt-1 text-zinc-300"
+  aria-hidden="true"
+/>
           <div>
             <h4 className="mb-3 text-[12px] uppercase tracking-[0.35em] text-white">
               Lokalizacja
@@ -229,7 +289,11 @@ export default function Kontakt() {
 
         <div className="mt-12 border border-white/10 p-8">
           <div className="flex gap-5">
-            <FiClock size={24} className="mt-1 text-zinc-300" />
+            <FiClock
+  size={24}
+  className="mt-1 text-zinc-300"
+  aria-hidden="true"
+/>
             <div>
               <p className="mb-3 text-[12px] uppercase tracking-[0.4em] text-white">
                 Czas odpowiedzi

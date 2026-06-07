@@ -11,10 +11,25 @@ export default function PolitykaPrywatnosci() {
         url="/polityka-prywatnosci"
       />
 
-      <main className="min-h-screen bg-black text-white">
+      <a
+  href="#tresc-polityki"
+  className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[10000] focus:bg-white focus:px-5 focus:py-3 focus:text-[12px] focus:font-bold focus:uppercase focus:tracking-[0.2em] focus:text-black"
+>
+  Przejdź do treści
+</a>
+
+<main
+  id="main-content"
+  tabIndex="-1"
+  className="min-h-screen bg-black text-white"
+>
         <Sidebar active="/polityka-prywatnosci" />
 
-        <section className="px-5 py-28 md:px-14 xl:ml-[180px] xl:px-20">
+        <section
+  id="tresc-polityki"
+  tabIndex="-1"
+  className="px-5 py-28 md:px-14 xl:ml-[180px] xl:px-20"
+>
           <div className="mx-auto max-w-[980px]">
             <p className="mb-5 text-[11px] uppercase tracking-[0.4em] text-zinc-500">
               / Dokumenty
@@ -46,9 +61,10 @@ export default function PolitykaPrywatnosci() {
                   Polska. Kontakt z Administratorem możliwy jest pod adresem
                   e-mail:{" "}
                   <a
-                    href="mailto:kontakt@twojsamuel.pl"
-                    className="text-white underline underline-offset-4"
-                  >
+  href="mailto:kontakt@twojsamuel.pl"
+  aria-label="Wyślij wiadomość e-mail na adres kontakt@twojsamuel.pl"
+  className="text-white underline underline-offset-4"
+>
                     kontakt@twojsamuel.pl
                   </a>
                   .
@@ -338,6 +354,7 @@ export default function PolitykaPrywatnosci() {
                   Administratorem pod adresem:{" "}
                   <a
                     href="mailto:kontakt@twojsamuel.pl"
+                    aria-label="Wyślij wiadomość e-mail na adres kontakt@twojsamuel.pl"
                     className="text-white underline underline-offset-4"
                   >
                     kontakt@twojsamuel.pl

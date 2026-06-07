@@ -534,6 +534,22 @@ export default function MusicPage() {
   };
 }, [showLyricsModal]);
 
+React.useEffect(() => {
+  const handleEscape = (event) => {
+    if (event.key === "Escape") {
+      setShowLyricsModal(false);
+    }
+  };
+
+  if (showLyricsModal) {
+    document.addEventListener("keydown", handleEscape);
+  }
+
+  return () => {
+    document.removeEventListener("keydown", handleEscape);
+  };
+}, [showLyricsModal]);
+
   const audioRef = React.useRef(null);
 
   const activeSection = discography[discographyIndex];
@@ -543,6 +559,7 @@ export default function MusicPage() {
 );
   const lyricsContainerRef = React.useRef(null);
 const activeLineRef = React.useRef(null);
+const lyricsModalScrollRef = React.useRef(null);
 
 React.useEffect(() => {
   if (!activeLineRef.current) return;
@@ -561,6 +578,14 @@ React.useEffect(() => {
   });
 
 }, [activeLyricIndex]);
+
+React.useEffect(() => {
+  if (!showLyricsModal) return;
+
+  setTimeout(() => {
+    lyricsModalScrollRef.current?.focus();
+  }, 0);
+}, [showLyricsModal]);
 
   React.useEffect(() => {
     return () => {
@@ -679,7 +704,18 @@ const seekAudio = (seconds) => {
       url="/muzyka"
     />
 
-    <main className="min-h-screen bg-black pb-[104px] text-white md:pb-[122px]">
+    <a
+  href="#dyskografia"
+  className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[10000] focus:bg-white focus:px-5 focus:py-3 focus:text-[12px] focus:font-bold focus:uppercase focus:tracking-[0.2em] focus:text-black"
+>
+  Przejdź do treści
+</a>
+
+<main
+  id="main-content"
+  tabIndex="-1"
+  className="min-h-screen bg-black pb-[104px] text-white md:pb-[122px]"
+>
       <Sidebar active="/muzyka" />
 
       <section className="relative min-h-[100svh] overflow-hidden border-b border-white/10 bg-black xl:ml-[180px]">
@@ -721,7 +757,11 @@ const seekAudio = (seconds) => {
   </motion.div>
 </section>
 
-      <section className="border-b border-white/10 px-5 py-16 md:px-8 md:py-24 xl:ml-[180px] xl:px-16">
+<section
+  id="dyskografia"
+  tabIndex="-1"
+  className="border-b border-white/10 px-5 py-16 md:px-8 md:py-24 xl:ml-[180px] xl:px-16"
+>
         <div className="grid gap-12 lg:grid-cols-[240px_1fr]">
           <div>
             <p className="mb-12 text-[12px] uppercase tracking-[0.45em] text-zinc-500">
@@ -734,25 +774,29 @@ const seekAudio = (seconds) => {
 
             <div className="mt-12 h-px w-16 bg-white/40" />
 
-            <div className="mt-10 flex items-center gap-4">
-              <button
-                onClick={prevDiscography}
-                className="flex h-11 w-11 items-center justify-center border border-white/10 text-lg text-zinc-400 transition hover:border-white hover:text-white"
-              >
-                ←
-              </button>
+<div className="mt-10 flex items-center gap-4">
+  <button
+    type="button"
+    onClick={prevDiscography}
+    aria-label="Poprzedni album"
+    className="flex h-11 w-11 items-center justify-center border border-white/10 text-lg text-zinc-400 transition hover:border-white hover:text-white"
+  >
+    ←
+  </button>
 
-              <button
-                onClick={nextDiscography}
-                className="flex h-11 w-11 items-center justify-center border border-white/10 text-lg text-zinc-400 transition hover:border-white hover:text-white"
-              >
-                →
-              </button>
-            </div>
+  <button
+    type="button"
+    onClick={nextDiscography}
+    aria-label="Następny album"
+    className="flex h-11 w-11 items-center justify-center border border-white/10 text-lg text-zinc-400 transition hover:border-white hover:text-white"
+  >
+    →
+  </button>
+</div>
 
-            <p className="mt-5 text-[10px] uppercase tracking-[0.28em] text-zinc-600">
-              {discographyIndex + 1} / {discography.length}
-            </p>
+<p className="mt-5 text-[10px] uppercase tracking-[0.28em] text-zinc-600">
+  {discographyIndex + 1} / {discography.length}
+</p>
           </div>
 
           <div>
@@ -970,51 +1014,62 @@ Pokaż cały tekst ↗
     </div>
 
     <div className="flex items-center gap-4 md:pl-8 xl:gap-7 xl:pl-10">
-      <button
-        onClick={() => seekAudio(-5)}
-        className="hidden opacity-70 transition hover:opacity-100 md:block"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="white"
-          className="h-5 w-5"
-        >
-          <path d="M11 18V6l-8.5 6L11 18Zm10 0V6l-8.5 6L21 18Z" />
-        </svg>
-      </button>
+<button
+  type="button"
+  onClick={() => seekAudio(-5)}
+  aria-label="Przewiń utwór o 5 sekund do tyłu"
+  className="hidden opacity-70 transition hover:opacity-100 md:block"
+>
+  <svg
+    aria-hidden="true"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="white"
+    className="h-5 w-5"
+  >
+    <path d="M11 18V6l-8.5 6L11 18Zm10 0V6l-8.5 6L21 18Z" />
+  </svg>
+</button>
 
-      <button
-        onClick={toggleBottomPlayer}
-        className="flex h-[52px] w-[52px] items-center justify-center rounded-full border border-white/60 text-white transition hover:border-white md:h-20 md:w-20"
-      >
-        {isPlaying ? (
-          <span className="text-2xl md:text-3xl">Ⅱ</span>
-        ) : (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="white"
-            className="ml-[2px] h-6 w-6 md:h-7 md:w-7"
-          >
-            <path d="M8 5v14l11-7z" />
-          </svg>
-        )}
-      </button>
+<button
+  type="button"
+  onClick={toggleBottomPlayer}
+  aria-label={isPlaying ? "Pauza" : "Odtwórz utwór"}
+  className="flex h-[52px] w-[52px] items-center justify-center rounded-full border border-white/60 text-white transition hover:border-white md:h-20 md:w-20"
+>
+  {isPlaying ? (
+    <span className="text-2xl md:text-3xl" aria-hidden="true">
+      Ⅱ
+    </span>
+  ) : (
+    <svg
+      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="white"
+      className="ml-[2px] h-6 w-6 md:h-7 md:w-7"
+    >
+      <path d="M8 5v14l11-7z" />
+    </svg>
+  )}
+</button>
 
-      <button
-        onClick={() => seekAudio(5)}
-        className="hidden opacity-70 transition hover:opacity-100 md:block"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="white"
-          className="h-5 w-5"
-        >
-          <path d="M13 6v12l8.5-6L13 6ZM3 6v12l8.5-6L3 6Z" />
-        </svg>
-      </button>
+<button
+  type="button"
+  onClick={() => seekAudio(5)}
+  aria-label="Przewiń utwór o 5 sekund do przodu"
+  className="hidden opacity-70 transition hover:opacity-100 md:block"
+>
+  <svg
+    aria-hidden="true"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="white"
+    className="h-5 w-5"
+  >
+    <path d="M13 6v12l8.5-6L13 6ZM3 6v12l8.5-6L3 6Z" />
+  </svg>
+</button>
     </div>
   </div>
 
@@ -1025,8 +1080,11 @@ Pokaż cały tekst ↗
 
       {showLyricsModal && (
 <div
-className="fixed inset-0 z-[999] flex items-center justify-center bg-black/95 p-4 backdrop-blur-md md:p-6"
-onClick={() => setShowLyricsModal(false)}
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="lyrics-modal-title"
+  className="fixed inset-0 z-[999] flex items-center justify-center bg-black/95 p-4 backdrop-blur-md md:p-6"
+  onClick={() => setShowLyricsModal(false)}
 >
 
 <div
@@ -1042,24 +1100,31 @@ onClick={(e)=>e.stopPropagation()}
 TEKST
 </p>
 
-<h2 className="break-words text-[24px] uppercase leading-[1.2] tracking-[0.16em] text-white md:text-[34px] md:tracking-[0.2em]">
+<h2
+  id="lyrics-modal-title"
+  className="break-words text-[24px] uppercase leading-[1.2] tracking-[0.16em] text-white md:text-[34px] md:tracking-[0.2em]"
+>
 {activeTrack.title}
 </h2>
 
 </div>
 
 <button
-onClick={()=>setShowLyricsModal(false)}
-className="text-zinc-500 transition hover:text-white"
+  type="button"
+  onClick={() => setShowLyricsModal(false)}
+  aria-label="Zamknij tekst utworu"
+  className="text-zinc-500 transition hover:text-white"
 >
-✕
+  ✕
 </button>
 
 </div>
 
 
 <div
-  className="max-h-[65vh] overflow-y-auto overscroll-contain pr-3 md:pr-5"
+  ref={lyricsModalScrollRef}
+  tabIndex={0}
+  className="max-h-[65vh] overflow-y-auto overscroll-contain pr-3 md:pr-5 outline-none"
   onWheel={(e) => e.stopPropagation()}
   onTouchMove={(e) => e.stopPropagation()}
 >

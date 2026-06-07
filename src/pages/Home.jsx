@@ -872,7 +872,18 @@ export default function Home() {
         url="/"
       />
 
-      <main className="min-h-screen bg-black text-white">
+      <a
+        href="#muzyka"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[10000] focus:bg-white focus:px-5 focus:py-3 focus:text-[12px] focus:font-bold focus:uppercase focus:tracking-[0.2em] focus:text-black"
+      >
+        Przejdź do treści
+      </a>
+
+      <main
+  id="main-content"
+  tabIndex="-1"
+  className="min-h-screen bg-black text-white"
+>
         <Header />
         <Hero />
         <LatestTracks />

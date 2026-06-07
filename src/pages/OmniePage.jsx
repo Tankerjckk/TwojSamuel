@@ -75,15 +75,27 @@ export default function OmniePage() {
   description="Poznaj historię TwójSamuel — muzyka, inspiracje i droga twórcza."
   url="/omnie"
 />
-    <main className="min-h-screen bg-black text-white">
+    <a
+  href="#historia"
+  className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[10000] focus:bg-white focus:px-5 focus:py-3 focus:text-[12px] focus:font-bold focus:uppercase focus:tracking-[0.2em] focus:text-black"
+>
+  Przejdź do treści
+</a>
+
+<main
+  id="main-content"
+  tabIndex="-1"
+  className="min-h-screen bg-black text-white"
+>
       <Sidebar active="/omnie" />
 
       <section className="relative min-h-screen overflow-hidden border-b border-white/10 bg-black xl:ml-[180px]">
-        <img
-          src={omnieHeroBanner}
-          alt="O mnie"
-          className="absolute inset-0 h-full w-full object-cover opacity-80"
-        />
+<img
+  src={omnieHeroBanner}
+  alt=""
+  aria-hidden="true"
+  className="absolute inset-0 h-full w-full object-cover opacity-80"
+/>
 
         <div className="absolute inset-0 bg-black/30" />
         <div className="absolute inset-0 bg-gradient-to-r from-black via-black/50 to-transparent" />
@@ -115,7 +127,11 @@ export default function OmniePage() {
         </motion.div>
       </section>
 
-      <section className="border-b border-white/10 bg-black px-8 py-24 md:px-14 xl:ml-[180px] xl:px-20">
+      <section
+  id="historia"
+  tabIndex="-1"
+  className="border-b border-white/10 bg-black px-8 py-24 md:px-14 xl:ml-[180px] xl:px-20"
+>
         <motion.div
           className="mx-auto max-w-[1500px]"
           variants={fadeUp}
@@ -203,9 +219,10 @@ export default function OmniePage() {
                     : ""
                 }`}
               >
-                <img
+<img
   src={value.icon}
-  alt={value.title}
+  alt=""
+  aria-hidden="true"
   className="mx-auto -mb-2 h-32 w-32 object-contain opacity-90 transition duration-500 hover:scale-110"
 />
 
@@ -231,11 +248,12 @@ export default function OmniePage() {
     viewport={{ amount: 0.25 }}
   >
     <div className="relative overflow-hidden border border-white/10 bg-zinc-950/40">
-      <img
-        src={omnieCytat}
-        alt="Cytat"
-        className="h-[520px] w-full object-cover object-left opacity-80 md:h-[380px] md:object-center"
-      />
+<img
+  src={omnieCytat}
+  alt=""
+  aria-hidden="true"
+  className="h-[520px] w-full object-cover object-left opacity-80 md:h-[380px] md:object-center"
+/>
 
       <div className="absolute inset-0 bg-black/45 md:bg-transparent" />
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent md:bg-gradient-to-r md:from-black/10 md:via-black/20 md:to-black/50" />

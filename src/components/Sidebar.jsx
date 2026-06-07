@@ -34,13 +34,32 @@ export default function Sidebar({ active }) {
 
   const closeMenu = () => setOpen(false);
 
+  React.useEffect(() => {
+  const handleEscape = (event) => {
+    if (event.key === "Escape") {
+      setOpen(false);
+    }
+  };
+
+  if (open) {
+    document.addEventListener("keydown", handleEscape);
+  }
+
+  return () => {
+    document.removeEventListener("keydown", handleEscape);
+  };
+}, [open]);
+
   return (
     <>
-      <button
-        onClick={() => setOpen(true)}
-        className="fixed left-5 top-5 z-[80] flex h-12 w-12 flex-col items-center justify-center gap-[6px] border border-white/15 bg-black/70 backdrop-blur-md xl:hidden"
-        aria-label="Otwórz menu"
-      >
+<button
+  type="button"
+  onClick={() => setOpen(true)}
+  aria-label="Otwórz menu"
+  aria-expanded={open}
+  aria-controls="mobile-sidebar"
+  className="fixed left-5 top-5 z-[80] flex h-12 w-12 flex-col items-center justify-center gap-[6px] border border-white/15 bg-black/70 backdrop-blur-md xl:hidden"
+>
         <span className="h-px w-5 bg-white" />
         <span className="h-px w-5 bg-white" />
         <span className="h-px w-5 bg-white" />
@@ -100,11 +119,12 @@ export default function Sidebar({ active }) {
         }`}
       />
 
-      <aside
-        className={`fixed left-0 top-0 z-[100] h-screen w-[82%] max-w-[340px] border-r border-white/10 bg-black px-7 py-7 transition duration-500 xl:hidden ${
-          open ? "translate-x-0" : "-translate-x-full"
-        }`}
-      >
+<aside
+  id="mobile-sidebar"
+  className={`fixed left-0 top-0 z-[100] h-screen w-[82%] max-w-[340px] border-r border-white/10 bg-black px-7 py-7 transition duration-500 xl:hidden ${
+    open ? "translate-x-0" : "-translate-x-full"
+  }`}
+>
         <div className="mb-16 flex items-center justify-between">
           <Link to="/" onClick={closeMenu}>
             <img
@@ -114,13 +134,14 @@ export default function Sidebar({ active }) {
             />
           </Link>
 
-          <button
-            onClick={closeMenu}
-            className="h-11 w-11 border border-white/15 text-2xl text-white"
-            aria-label="Zamknij menu"
-          >
-            ×
-          </button>
+<button
+  type="button"
+  onClick={closeMenu}
+  aria-label="Zamknij menu"
+  className="h-11 w-11 border border-white/15 text-2xl text-white"
+>
+  ×
+</button>
         </div>
 
         <nav className="flex flex-col gap-8 text-[13px] uppercase tracking-[0.35em] text-zinc-400">
